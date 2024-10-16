@@ -1,0 +1,54 @@
+.header {
+    @include flex-row(20, space-between);
+    align-items: center;
+    padding: 50px 58px;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &__logo {
+        order: 2;
+        
+        &--centered {
+
+            @include mobile-above {
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute; /* Для абсолютного центрирования */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__language {
+        order: 3;
+    }
+
+    &__button {
+        order: 3;
+        flex: 0 !important;
+    }
+
+    @include mobile {
+        padding: 15px 20px;
+    }
+
+    &__burger {
+        top: 52px;
+        left: 56px;
+        position: absolute;
+
+        &--navbar, &--default {
+            position: relative;
+            inset: 0;
+            order: 1;
+        }
+
+        @include tablet {
+            order: 6;
+            position: relative !important;
+            inset: 0;
+        }
+    }
+}
