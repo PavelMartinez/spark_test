@@ -335,6 +335,16 @@
    line-height: 150.0%;
    text-decoration: none;
    letter-spacing: normal; } 
+
+
+@mixin font-inter-14-regular {
+    // Inter/14/Regular //
+   font-family: var(--font-inter);
+   font-weight: 400;
+   font-size: 14px; 
+   line-height: 130.0%;
+   text-decoration: none;
+   letter-spacing: normal; } 
  /* Developed by sawacrow
 https://www.buymeacoffee.com/sawacrow :If you wanna support, you can buy me a pizza :)
 https://github.com/sawacrow/typograpgy-generator-figma : You can check the source code here and contribute or support
