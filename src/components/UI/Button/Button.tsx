@@ -13,10 +13,8 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({label}) => {
 	return (
-		<button
-			className='button'
-		>
-			<ButtonSvg className='button__icon'/>
+		<button className='button button--variant-primary'>
+			<ButtonSvg className='button__icon' />
 			<div className='button__text'>{label}</div>
 		</button>
 	)

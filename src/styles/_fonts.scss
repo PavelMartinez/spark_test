@@ -339,8 +339,9 @@
 
 @mixin font-inter-14-regular {
     // Inter/14/Regular //
-   font-family: var(--font-inter);
+   font-family: 'Inter', sans-serif;
    font-weight: 400;
+
    font-size: 14px; 
    line-height: 130.0%;
    text-decoration: none;

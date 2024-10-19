@@ -1,18 +1,22 @@
 .button {
     @include reset-button;
     display: inline-flex;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
-
-    height: 60px;
 
     flex: 1;
 
     cursor: pointer;
     box-sizing: border-box;
-    border-radius: 150px;
 
-    background-color: #009CFF;
+    &--variant {
+       &-primary {
+            gap: 16px;
+            border-radius: 150px;
+            height: 60px;
+            background-color: #009CFF;
+       }
+    }
 
     &__icon {
         padding-left: 5px;
