@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+    padding: 34px 0;
+    
+}
+
+
+.header {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+   border-radius: 0 0 20px 20px;
+    
+    
+    
+
+
+    &__left {
+        display: inline-flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__right {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__menu {
+
+
+
+
+        &-list {
+            display: flex;
+            column-gap: 30px;
+        }
+
+        &-item {
+            display: inline-flex;
+            align-items: center;
+            color: #6F644D;
+            cursor: pointer;
+        }
+        
+        &-link {
+            font-family: 'Inter', sans-serif;
+            @include font-inter-14-regular;
+            color: #6F644D;
+        }
+    }
+}

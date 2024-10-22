@@ -1,0 +1,63 @@
+.button {
+    @include reset-button;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &--variant {
+       &-default {
+            
+            padding: 5px 40px 5px 5px;
+            
+        }
+
+        &-login {
+            padding: 5px 50px 4px 5px;
+        }
+    }
+
+    &--size {
+        &-M, &-m {
+            @include font-inter-14-regular;
+            border-radius: 150px; 
+        }
+    }
+
+    &--color {
+
+        
+
+        &-blue {
+            color: #ffffff;
+            background: #009CFF;
+            @include hover {
+                background: #2685E4;
+            }
+        }
+
+        &-green {
+            color: #ffffff;
+            background: #49C4CC;
+            @include hover {
+                background: #40B3BA;
+            }
+        }
+    }
+
+
+
+
+    &__icon {
+        @include flex-center;
+        
+        flex: 0 0 auto;
+
+    }
+
+    &__text {
+        margin-inline: auto;
+    }
+}

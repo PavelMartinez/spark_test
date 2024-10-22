@@ -1,0 +1,19 @@
+.generation-selector {
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid #EAEAEB;
+    color: #6F644D;
+    padding: 8px;
+    
+
+    &__icon {
+        @include flex-center;
+        
+        flex: 0 0 auto;
+    }
+}
