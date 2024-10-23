@@ -1,13 +1,12 @@
 body {
-  @include font-manrope-16-regular;
-  color: var(--White);
-  background: url("../../public/Images/BackgroundMain.png") no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: var(--Black2, #0F0F0F);
+  @include font-inter-16-regular;
+  color: var(--color-gray10, #11133A);
+
+  
+  background-color: var(--color-gray1, #F8F8F8);
 
   white-space: pre-line;
-  position: relative;
+  position: relative; 
 }
 
 a,
@@ -24,22 +23,28 @@ a {
 }
 
 h1, .h1 {
-  color: var(--White);
-  @include font-manrope-60-bold;
+  color: var(--color-gray10, #11133A);
+  @include font-inter-60-bold;
 }
 
 h2, .h2 {
-  color: var(--White);
-  @include font-manrope-40-bold;
+  color: var(--color-gray10, #11133A);
+  @include font-inter-40-semibold;
 }
 
 h3, .h3 {
-  color: var(--White);
-  @include font-manrope-32-bold;
+  color: var(--color-gray10, #11133A);
+  @include font-inter-32-bold;
 }
 
 h4, .h4 {
+  color: var(--color-gray10, #11133A);
   @include fluid-text(20, 18);
+}
+
+h5, .h5 {
+  color: var(--color-gray10, #11133A);
+  @include fluid-text(16, 14);
 }
 
 hr {

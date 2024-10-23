@@ -1,8 +1,35 @@
-body {
-    margin: 0;
-    background-color: #F8F8F8;
+.home {
+    &__buttons {
+        @include flex-center;
+        gap: 20px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+
+        &-text {
+            padding-right: 64px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 10px;
+            &-bold {
+                @include font-inter-24-semibold;
+            }
+        }
+
+        &-item {
+            @include flex-row;
+            align-items: center;
+            text-align: center;
+            width: 705px;
+
+            border-radius: 20px;
+            background: var(--color-white, #ffffff);
+            color: var(--color-dark, #11133A);
+            @include font-inter-16-regular;
+
+            height: 80px;
+            padding: 8px 20px;
+        }
+    }
 }
-
-
 
 

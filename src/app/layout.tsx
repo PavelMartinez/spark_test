@@ -1,4 +1,5 @@
-import { Inter } from 'next/font/google'
+import { Inter} from 'next/font/google'
+import '@/styles/index.scss'
 
 export const metadata = {
   title: 'Next.js',
@@ -7,8 +8,8 @@ export const metadata = {
 
 const fontInter = Inter({
 	subsets: ['latin'],
-	variable: '--font-inter',
-	display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
 })
 
 export default function RootLayout({

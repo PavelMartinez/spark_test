@@ -21,7 +21,7 @@
 
     &--size {
         &-M, &-m {
-            @include font-inter-14-regular;
+            @include font-inter-14-regular-uppercase;
             border-radius: 150px; 
         }
     }
@@ -31,18 +31,19 @@
         
 
         &-blue {
-            color: #ffffff;
-            background: #009CFF;
+            color: var(--color-white, #ffffff);
+            background: var(--color-blue, #009CFF);
             @include hover {
-                background: #2685E4;
+                box-shadow: 0 0 19px 0 rgba(19, 101, 211, 0.15);
+                background: var(--color-blue-dark, #2685E4);
             }
         }
 
         &-green {
-            color: #ffffff;
-            background: #49C4CC;
+            color: var(--color-white, #ffffff);
+            background: var(--color-green, #49C4CC);
             @include hover {
-                background: #40B3BA;
+                background: var(--color-green-dark, #40B3BA);
             }
         }
     }

@@ -9,16 +9,16 @@ import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
 import { Generation } from '../UI/primitives/Generation/Generation'
 import AltArrowDown from '../UI/svg/Alt Arrow Down.svg'
-import './Header.scss'
+ 
  
 function Header() {
   return (
 		<header className='header'>
 			<div className='header__inner container'>
 				<div className='header__left'>
-					<a className='header__logo logo' href='#'>
+					<div className='header__logo logo'>
 						<Logo />
-					</a>
+					</div>
 					<Button
 						variant='default'
 						iconLeft={<ButtonSvg width='50' height='50' />}
