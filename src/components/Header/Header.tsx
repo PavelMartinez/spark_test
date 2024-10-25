@@ -1,14 +1,9 @@
 import React from 'react'
-
-import ButtonSvg from '../UI/svg/ButtonSvg.svg'
-import Login from '../UI/svg/Login.svg'
+import { ButtonSvg, Login, Logo, FlagSvgRu, AltArrowDown } from '../UI/svg'
 import Button from '../UI/primitives/Button/Button'
-import Logo from '../UI/svg/Logo.svg'
-import FlagSvgRu  from '../UI/svg/Flag-ru.svg'
 import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
 import { Generation } from '../UI/primitives/Generation/Generation'
-import AltArrowDown from '../UI/svg/Alt Arrow Down.svg'
  
  
 function Header() {

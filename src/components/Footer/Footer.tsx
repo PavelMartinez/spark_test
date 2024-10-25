@@ -1,15 +1,7 @@
 
-import Logo from '../UI/svg/Logo.svg';
+import { Logo, Login, ButtonSvg, YoutubeIcon, InstIcon, InIcon, FacebookIcon, PinterestIcon, XIcon } from '../UI/svg';
 import Button from '../UI/primitives/Button/Button';
-import ButtonSvg from '../UI/svg/ButtonSvg.svg';
-import Login from '../UI/svg/Login.svg';
 import Navbar from '../Navbar/Navbar';
-import YoutubeIcon from '../UI/svg/YoutubeIcon.svg';
-import InstIcon from '../UI/svg/InstIcon.svg'; 
-import InIcon from '../UI/svg/InIcon.svg';
-import FacebookIcon from '../UI/svg/FacebookIcon.svg';
-import PinterestIcon from '../UI/svg/PinterestIcon.svg';
-import XIcon from '../UI/svg/XIcon.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Generation } from '../UI/primitives/Generation/Generation';
