@@ -1,14 +1,14 @@
 .footer {
-
     padding-top: 40px;
 
-   @include flex-center;
-    margin: auto;
+    @include flex-center;
     
     background-color: #fff;
     border-radius: 20px 20px 0 0;
 
-    
+    &__inner {
+        width: 100%;
+    }
 
     &__hr {
         width: 100%;
@@ -17,78 +17,117 @@
 
     &__socials {
         @include flex-row(20);
-        width: 100%;
-        
-        
+
+        @include mobile {
+            margin-inline: auto;
+        }
     }
 
-    &__top {
+    &-top {
         @include flex-column(15);
+        flex-wrap: wrap;
         margin-bottom: 40px;
-       
 
-        &-logo {
-            @include flex-row;
-            width: var(--container-width);
-            
+        &__logo {
+            @include flex-center;
 
-            &-text {
-                margin-left: auto;
-                display: flex;
-                align-items: center;
-                gap: 50px;
-                
+            @include mobile {
+                flex: 1 0 100%;
             }
         }
 
-        &-buttons {
-            @include flex-center;
-            width: var(--container-width);
+        &__generation {
+            align-self: flex-start;
+        }
+
+        &__row {
+            @include flex-row(30, space-between);
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+
+            &--reverse {
+                flex-wrap: wrap-reverse;
+            }
+        }
+       
+        &__menu {
+            @include flex-row(50, center);
+            align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &__buttons {
+            @include flex-row(20, center);
             
-            
+            @include mobile {
+                width: 100%;
+            }
+
             &-button {
-                
-                @include flex-row(20, center);
-                
+                @include mobile {
+                    flex: 1;
+                    width: 100%;
+                }
             }
         }
     }
 
-    &__bottom {
-        @include flex-row;
-        
-        justify-content: space-between;
+    &-bottom {
+        @include flex-row(20, space-between);
+        flex-wrap: wrap-reverse;
         align-items: center;
+
+        @include mobile {
+            justify-content: center;
+        }
+
         padding: 42px 0;
         border-top: 1px solid var(--color-gray5);
     }
 
     &__info {
         color: var(--color-gray7, #515266);
+        
+
+        @include mobile {
+            width: 100%;
+        }
 
         &-list {
             @include flex-row(40, center);
+            flex-wrap: wrap;
             cursor: pointer;
+
+            @include mobile {
+                gap: 15px;
+            }
         }
 
         &-item {
             @include font-inter-14-regular;
-            
+            text-decoration: underline;
+
+            @include mobile {
+                flex: 0 1 calc(50% - 15px);
+
+                &:nth-child(2n) {
+                    text-align: end;
+                }
+            }
         }
-
-       
-
-
-
     }
 
     &__payments {
-        
-
-        display: inline-flex;
+        display: flex;
         gap: 27px;
         align-items: center;
-        box-sizing: border-box;
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 15px 42px;
         
         border-radius: 50px;
@@ -105,87 +144,3 @@
         }
     }
 }
-
-
-// .footer {
-    // padding-bottom: 50px;
-
-    // &__hr {
-    //     margin-block: 0px 41px;
-    // }
-
-    // &__list {
-    //     @include flex-column(20);
-
-    //     &-item {
-    //         flex: 1;
-    //     }
-
-    //     &-link {
-    //         width: 100%;
-    //         @include flex-row(10, space-between);
-    //         align-items: center;
-    //         @include font-manrope-16-semibold;
-    //         color: var(--Text-gray-Dark, #A5A5A5);
-    //     }
-    // }
-
-    // &__socials {
-    //     @include flex-row(20);
-    //     width: 100%;
-    //     justify-content: center;
-    //     margin-top: 32px;
-    // }
-
-    // &__bottom {
-    //     @include flex-row(32);
-    //     align-items: center;
-    //     flex-wrap: wrap-reverse;
-    // }
-
-    // &__buttons {
-    //     @include flex-column(5);
-    //     margin-top: 32px;
-    //     margin-bottom: 32px;
-
-    //     &-item {
-    //         @include flex-row(5, center);
-    //         align-items: center;
-    //         flex: 1;
-    //         width: 100%;
-
-    //         border-radius: 10px;
-    //         background: var(--Black3, #1D1D1D);
-    //         color: var(--White, #FFF);
-    //         @include font-manrope-24-bold;
-
-    //         height: 80px;
-    //         padding: 8px 20px;
-    //     }
-    // }
-
-    // &__info {
-    //     color: var(--Text-gray-Dark, #A5A5A5);
-    //     text-align: center;
-    //     @include font-manrope-12-medium;
-    //     opacity: 0.5;
-
-    //     max-width: 50%;
-    // }
-
-    // &__payments {
-    //     padding: 15px 42px;
-    //     @include flex-column(10);
-    //     align-items: center;
-    //     margin-inline: auto;
-
-    //     flex: 1;
-
-    //     border-radius: 10px;
-    //     border: 1px solid #343434;
-
-    //     &-list {
-    //         @include flex-row(10, center);
-    //     }
-    // }
-// }

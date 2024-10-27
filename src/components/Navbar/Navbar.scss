@@ -1,10 +1,14 @@
- .navbar {
- 
-
+.navbar {
     &-list {
         display: flex;
         align-items: center;
         column-gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-start;
+        }
        
 
         &__item {
@@ -15,16 +19,14 @@
             // padding: 12px 20px;
 
             cursor: pointer;
-            
-            
         }
 
         &__link {
             @include font-inter-14-regular-uppercase;
         }
- }
+    }
 
- &__layout {
+    &__layout {
         position: absolute;
         // inset: 0;
         // width: 100%;
@@ -36,9 +38,4 @@
 
         // z-index: 100;
     }
-}
-
-ul {
-    margin-block: 0;
-    padding: 0;
 }

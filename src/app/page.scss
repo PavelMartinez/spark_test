@@ -6,11 +6,11 @@
         margin-bottom: 32px;
 
         &-text {
-            padding-right: 64px;
             margin-right: auto;
             margin-left: auto;
             margin-top: 10px;
-            &-bold {
+
+            &--bold {
                 @include font-inter-24-semibold;
             }
         }
@@ -19,7 +19,6 @@
             @include flex-row;
             align-items: center;
             text-align: center;
-            width: 705px;
 
             border-radius: 20px;
             background: var(--color-white, #ffffff);

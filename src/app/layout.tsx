@@ -1,5 +1,7 @@
-import { Inter} from 'next/font/google'
+import { Inter } from 'next/font/google'
 import '@/styles/index.scss'
+import Header from '@/components/Header/Header'
+import { Footer } from '@/components/Footer/Footer'
 
 export const metadata = {
   title: 'Next.js',
@@ -19,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fontInter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
