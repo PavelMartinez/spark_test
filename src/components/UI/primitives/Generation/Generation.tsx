@@ -11,7 +11,6 @@ interface GenerationProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 
 export const Generation: React.FC<GenerationProps> = ({
 	className,
-	leftIcon,
 	...props
 }) => {
 	return (
