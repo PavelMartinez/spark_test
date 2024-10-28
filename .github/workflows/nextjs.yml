@@ -8,9 +8,6 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-  
-  pull_request:
-    branches: ["main"]
 
   pull_request:
     branches: ["main"]
@@ -34,8 +31,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: predeploy_build
     steps:
       - name: Checkout
         uses: actions/checkout@v4
