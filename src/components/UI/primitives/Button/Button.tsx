@@ -9,12 +9,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	iconLeft?: React.ReactNode
 }
 
-const ButtonContent: React.FC<ButtonProps> = ({ variant = 'default', size = 'M', color = 'blue', children, iconLeft, ...props }) => {
+const ButtonContent: React.FC<ButtonProps> = ({ variant = 'default', size = 'M', color = 'blue', children, iconLeft, className, ...props }) => {
 	if (variant === 'default') {
 		return (
 			<button
 				{...props}
-				className={`button button--variant-${variant} button--size-${size} button--color-${color}`}
+				className={`button button--variant-${variant} button--size-${size} button--color-${color} ${className || ""}`}
 			>
 				<div className={`button__icon button__size-${size}`}>{iconLeft}</div>
 				<div className='button__text'>
@@ -29,7 +29,7 @@ const ButtonContent: React.FC<ButtonProps> = ({ variant = 'default', size = 'M',
 		return (
 			<button
 				{...props}
-				className={`button button--variant-${variant} button--size-${size} button--color-${color}`}
+				className={`button button--variant-${variant} button--size-${size} button--color-${color} ${className || ""}`}
 			>
 				<div className={`button__icon button__size-${size}`}>{iconLeft}</div>
 				<div className='button__text'>{children}</div>

@@ -6,8 +6,11 @@ body {
   background-color: var(--color-gray1, #F8F8F8);
 
   white-space: pre-line;
-  position: relative; 
 }
+
+// * {
+//   outline: 1px solid red;
+// }
 
 a,
 button,

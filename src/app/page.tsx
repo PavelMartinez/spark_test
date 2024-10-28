@@ -10,9 +10,7 @@ import AndroidIconImage from '../../public/Icons/AndroidIconImage.png'
 
 export default function Home() {
   return (
-		<>
-			<Header />
-			
+		<main className='home container'>
 			<div className='home__buttons'>
 				<Link href='/instructions/ios' className='home__buttons-item'>
 					<Image
@@ -24,7 +22,7 @@ export default function Home() {
 					/>
 					<div className='home__buttons-text'>
 						DOWNLOAD THE APP ON
-						<div className='home__buttons-text-bold'>IOS</div>
+						<div className='home__buttons-text--bold'>IOS</div>
 					</div>
 				</Link>
 				<Link href='/instructions/android' className='home__buttons-item'>
@@ -37,11 +35,10 @@ export default function Home() {
 					/>
 					<div className='home__buttons-text'>
 						DOWNLOAD THE APP ON
-						<div className='home__buttons-text-bold'>Android</div>
+						<div className='home__buttons-text--bold'>Android</div>
 					</div>
 				</Link>
 			</div>
-			<Footer />
-		</>
+		</main>
 	)
 }

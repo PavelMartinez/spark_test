@@ -12,16 +12,16 @@ import MirIconImage from '../../../public/Icons/MirIconImage.png';
 import QiwiIconImage from '../../../public/Icons/QiwiIconImage.png';
 import YoomoneyIconImage from '../../../public/Icons/YoomoneyIconImage.png';
 
-
-
 export const Footer = () => {
     return (
 			<footer className='footer'>
-				<div className='footer__container'>
-					<div className='footer__top'>
-						<div className='footer__top-logo'>
-							<Logo />
-							<div className='footer__top-logo-text'>
+				<div className='footer__inner container'>
+					<div className='footer-top'>
+						<div className='footer-top__row'>
+							<div className="footer-top__logo">
+								<Logo />
+							</div>
+							<div className='footer-top__menu'>
 								<Button
 									variant='default'
 									iconLeft={<ButtonSvg width='50' height='50' />}
@@ -30,8 +30,11 @@ export const Footer = () => {
 								</Button>
 								<Navbar variant='footer' />
 							</div>
+							<div className="footer-top__generation visible-mobile">
+								<Generation />
+							</div>
 						</div>
-						<div className='footer__top-buttons'>
+						<div className='footer-top__row footer-top__row--reverse'>
 							<ul className='footer__socials'>
 								<li className='footer__socials-item'>
 									<Link href='' className='icon footer__socials-link'>
@@ -64,38 +67,35 @@ export const Footer = () => {
 									</Link>
 								</li>
 							</ul>
-							<div className='footer__top-buttons-button'>
-								<Generation />
+							<div className='footer-top__buttons'>
+								<div className="hidden-mobile">
+									<Generation />
+								</div>
 								<Button
 									variant='login'
 									color='green'
 									iconLeft={<Login width='50' height='50' />}
+									className='footer-top__buttons-button'
 								>
 									LOGIN
 								</Button>
 							</div>
 						</div>
 					</div>
-					<div className='footer__bottom'>
+					<div className='footer-bottom'>
 						<div className='footer__info'>
 							<ul className='footer__info-list'>
 								<li className='footer__info-item'>
-									<a className='footer__info-link'>Privacy Policy</a>
+									<Link href="/" className='footer__info-link'>Privacy Policy</Link>
 								</li>
 								<li className='footer__info-item'>
-									<a className='footer__info-link'>Public offer</a>
+									<Link href="/" className='footer__info-link'>Public offer</Link>
 								</li>
 								<li className='footer__info-item'>
-									<a className='footer__info-link'>Cookies Policy</a>
+									<Link href="/" className='footer__info-link'>Cookies Policy</Link>
 								</li>
 								<li className='footer__info-item'>
-									<a className='footer__info-link'>Acceptable Use Policy</a>
-								</li>
-								<li className='footer__info-item'>
-									<a className='footer__info-link'>Return policy</a>
-								</li>
-								<li className='footer__info-item'>
-									<a className='footer__info-link'>©2023</a>
+									<Link href="/" className='footer__info-link'>©2023</Link>
 								</li>
 							</ul>
 						</div>

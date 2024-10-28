@@ -10,6 +10,12 @@ function Header() {
   return (
 		<header className='header'>
 			<div className='header__inner container'>
+				<div className="header__mobile">
+					<div className='header__logo logo'>
+						<Logo />
+					</div>
+					<button className="burger"></button>
+				</div>
 				<div className='header__left'>
 					<div className='header__logo logo'>
 						<Logo />
