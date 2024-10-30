@@ -1,29 +1,27 @@
 import React from 'react'
-import { ButtonSvg, Login, Logo, FlagSvgRu, AltArrowDown } from '../UI/svg'
+import { ButtonSvg, Login, Logo, LogoHeaderMob, FlagSvgRu, AltArrowDown } from '../UI/svg'
 import Button from '../UI/primitives/Button/Button'
 import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
 import { Generation } from '../UI/primitives/Generation/Generation'
+import BurgerButton from '../UI/primitives/BurgerButton/BurgerButton'
  
  
 function Header() {
   return (
 		<header className='header'>
 			<div className='header__inner container'>
-				<div className="header__mobile">
+				<div className='header__mobile'>
 					<div className='header__logo logo'>
-						<Logo />
+						<LogoHeaderMob />
 					</div>
-					<button className="burger"></button>
+					<BurgerButton variant='default' />
 				</div>
 				<div className='header__left'>
 					<div className='header__logo logo'>
 						<Logo />
 					</div>
-					<Button
-						variant='default'
-						iconLeft={<ButtonSvg width='50' height='50' />}
-					>
+					<Button variant='leftIcon' size='s' color='blue' icon={<ButtonSvg />}>
 						GENERATE
 					</Button>
 					<Navbar />
@@ -37,9 +35,10 @@ function Header() {
 					</LanguageSelector>
 					<Generation leftIcon={<FlagSvgRu />} rightIcon={<FlagSvgRu />} />
 					<Button
-						variant='login'
+						variant='leftIcon'
+						size='s'
 						color='green'
-						iconLeft={<Login width='50' height='50' />}
+						icon={<Login width='50' height='50' />}
 					>
 						LOGIN
 					</Button>

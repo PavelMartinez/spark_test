@@ -1,33 +1,72 @@
 .button {
     @include reset-button;
     display: inline-flex;
-    gap: 16px;
+    
     align-items: center;
 
+    border-radius: 150px; 
+    padding-inline: 60px;
     cursor: pointer;
     box-sizing: border-box;
 
+
     &--variant {
-       &-default {
-            
+        
+       &-leftIcon {
             padding: 5px 40px 5px 5px;
+            gap: 10px;
+        }
+
+        &-rightIcon {
+            gap: 10px;
             
         }
 
-        &-login {
-            padding: 5px 50px 4px 5px;
-        }
     }
 
     &--size {
         &-M, &-m {
+            @include font-inter-16-medium;
+            height: 72px;
+            
+            
+        }
+
+        &-S, &-s {
             @include font-inter-14-regular-uppercase;
-            border-radius: 150px; 
+           height: 60px;
+            
+        }
+
+        &-XL, &-xl {
+            @include font-inter-16-medium;
+            height: 72px;
+            padding-inline: 165px;
         }
     }
 
     &--color {
 
+        &-outline {
+            color: var(--color-gray7, #515266 );
+            border: 1px solid var(--color-gray7, #515266);
+            
+
+            @include hover {
+                color: var(--color-white, #ffffff);
+                background: var(--color-gray7, #515266);
+                
+            }
+        }
+
+        &-white {
+            color: var(--color-dark, #11133A);
+            background: var(--color-white, #ffffff);
+            
+            @include hover {
+                background: var(--color-blue-010, #E0EBF2);
+            }
+        }
         
 
         &-blue {
@@ -37,11 +76,13 @@
                 box-shadow: 0 0 19px 0 rgba(19, 101, 211, 0.15);
                 background: var(--color-blue-dark, #2685E4);
             }
+
         }
 
         &-green {
             color: var(--color-white, #ffffff);
             background: var(--color-green, #49C4CC);
+            stroke: var(--color-white, #ffffff);
             @include hover {
                 background: var(--color-green-dark, #40B3BA);
             }

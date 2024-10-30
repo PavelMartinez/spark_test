@@ -93,9 +93,11 @@
     &__info {
         color: var(--color-gray7, #515266);
         
+        
 
         @include mobile {
             width: 100%;
+            text-decoration: underline
         }
 
         &-list {
@@ -110,7 +112,7 @@
 
         &-item {
             @include font-inter-14-regular;
-            text-decoration: underline;
+            
 
             @include mobile {
                 flex: 0 1 calc(50% - 15px);
@@ -134,6 +136,10 @@
         background-color: var(--color-gray1);
        
         color: var(--color-dark, #11133A);
+
+        @include mobile {
+            border-radius : 10px;
+        }
 
         &-list {
             @include flex-row(10, center);
