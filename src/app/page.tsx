@@ -4,11 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import AppleIconImage from '../../public/Icons/AppleIconImage.png'
 import AndroidIconImage from '../../public/Icons/AndroidIconImage.png'
+import Banner from '@/components/Banner/Banner'
+import HowToWork from '@/components/HowToWork/HowToWork'
 
 
 export default function Home() {
   return (
 		<main className='home container'>
+			<Banner />
 			<div className='home__buttons'>
 				<Link href='/instructions/ios' className='home__buttons-item'>
 					<Image
@@ -37,6 +40,7 @@ export default function Home() {
 					</div>
 				</Link>
 			</div>
+			<HowToWork />
 		</main>
 	)
 }

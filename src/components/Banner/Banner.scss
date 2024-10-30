@@ -1,0 +1,86 @@
+.banner {
+    &__inner {
+        @include flex-row(0, space-between);
+        padding-top: 5px;
+
+        @include mobile {
+            @include flex-column(5);
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left {
+        position: relative;
+        background-color: var(--color-white, #ffffff);
+        border-radius: var(--border-radius);
+       
+        &-center {
+            @include abs-center;
+            @include flex-column(40);
+        }
+
+        &-image {
+           
+            object-fit: cover;
+            
+        }
+       
+        
+    }
+
+  
+
+
+    &__text {
+        
+        @include mobile {
+            @include font-inter-14-regular;
+        }
+
+        &-tag {
+            
+            @include flex-center(inline-flex);
+            gap: 10px;
+            background-color: var(--color-gray1);
+            border-radius: 150px;
+            padding: 8px 20px;
+
+            box-sizing: border-box;
+
+
+            &-p {
+                @include font-inter-14-regular;
+
+                @include mobile {
+                    @include font-inter-12-regular;
+                }
+
+            }
+        }
+
+        &-title {
+            white-space: nowrap;
+
+
+            &-h1 {
+                @include mobile {
+                    @include font-inter-32-bold;
+                }
+            }
+            
+        }
+    }
+
+    &__buttons {
+        @include flex-column(10);
+
+        &-bottom {
+            @include flex-row(10);
+            
+            @include mobile {
+                @include flex-column(10);
+            }
+        }
+    }
+}
+

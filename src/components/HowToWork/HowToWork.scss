@@ -1,0 +1,40 @@
+.work {
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        &__info {
+            &-text {
+                color: var(--color-white, #ffffff);
+            }
+
+            &-title {
+                white-space: nowrap;
+                @include font-inter-44-bold;
+                color: var(--color-white, #ffffff);
+            }
+
+            &-image {
+                border-radius: var(--border-radius);
+                background: linear-gradient(to right, #9FCCFA, #49C4CC);
+            }
+        }
+        
+        &__absolute {
+            @include abs-center;
+            
+            align-items: center;
+
+            @include flex-row(0, space-between);
+            padding-inline: 91px 54px;
+            
+            width: 100%;
+        }
+
+        &-left {
+            @include flex-column(40);
+            
+            
+        }
+        
+    }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonSvg, Login, Logo, LogoHeaderMob, FlagSvgRu, AltArrowDown } from '../UI/svg'
+import { ButtonSvg, Login, Logo, LogoHeaderMob, FlagSvgRu, AltArrowDown, ButtonMobSvg } from '../UI/svg'
 import Button from '../UI/primitives/Button/Button'
 import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
@@ -15,7 +15,12 @@ function Header() {
 					<div className='header__logo logo'>
 						<LogoHeaderMob />
 					</div>
-					<BurgerButton variant='default' />
+					<div className='header__buttons'>
+						<button className='header__buttons-item'>
+							<ButtonMobSvg />
+						</button>
+						<BurgerButton variant='default' />
+					</div>
 				</div>
 				<div className='header__left'>
 					<div className='header__logo logo'>

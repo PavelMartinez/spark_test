@@ -5,8 +5,12 @@
         margin-top: 32px;
         margin-bottom: 32px;
 
+        @include font-inter-16-regular;
+
         @include mobile {
             @include flex-column(10);
+            @include font-inter-14-regular;
+
         }
 
         &-text {
@@ -19,6 +23,10 @@
 
             &--bold {
                 @include font-inter-24-semibold;
+                @include mobile {
+                    @include font-inter-16-semibold;
+                    font-weight: 700;
+                }
             }
         }
 
@@ -31,7 +39,7 @@
             border-radius: 20px;
             background: var(--color-white, #ffffff);
             color: var(--color-dark, #11133A);
-            @include font-inter-16-regular;
+            
 
             height: 80px;
             padding: 8px 20px;

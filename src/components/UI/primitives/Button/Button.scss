@@ -10,11 +10,18 @@
     box-sizing: border-box;
 
 
+    &__content {
+        @include flex-row(10);
+        margin: auto;
+    }
+
+
     &--variant {
         
        &-leftIcon {
+            
             padding: 5px 40px 5px 5px;
-            gap: 10px;
+            gap: 15px;
         }
 
         &-rightIcon {
@@ -28,8 +35,12 @@
         &-M, &-m {
             @include font-inter-16-medium;
             height: 72px;
-            
-            
+
+            @include mobile {
+                @include font-inter-14-regular;
+                height: 52px;
+            }
+                
         }
 
         &-S, &-s {
@@ -41,7 +52,14 @@
         &-XL, &-xl {
             @include font-inter-16-medium;
             height: 72px;
-            padding-inline: 165px;
+            width: 488px;
+
+            @include mobile {
+                @include font-inter-14-regular;
+                height: 52px;
+                width: 100%;
+                
+            }
         }
     }
 
@@ -96,10 +114,9 @@
         @include flex-center;
         
         flex: 0 0 auto;
-
     }
 
     &__text {
-        margin-inline: auto;
+        margin: auto;
     }
 }

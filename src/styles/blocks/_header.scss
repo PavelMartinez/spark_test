@@ -64,4 +64,20 @@
     &__logo {
         @include flex-center;
     }
+
+
+    &__buttons {
+
+        @include flex-row(5);
+
+        &-item {
+            @include reset-button;
+            @include flex-center;
+            cursor: pointer;
+            border-radius: 50px;
+            background: var(--color-green);
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
