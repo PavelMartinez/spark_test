@@ -6,6 +6,8 @@ import AppleIconImage from '../../public/Icons/AppleIconImage.png'
 import AndroidIconImage from '../../public/Icons/AndroidIconImage.png'
 import Banner from '@/components/Banner/Banner'
 import HowToWork from '@/components/HowToWork/HowToWork'
+import Achievements from '@/components/Achievements/Achievements'
+import FrequentlyAskedQuestions from '@/components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
 
 
 export default function Home() {
@@ -41,6 +43,8 @@ export default function Home() {
 				</Link>
 			</div>
 			<HowToWork />
+			<Achievements /> 
+			<FrequentlyAskedQuestions />
 		</main>
 	)
 }

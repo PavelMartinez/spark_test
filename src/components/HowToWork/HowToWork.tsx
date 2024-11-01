@@ -24,7 +24,7 @@ const HowToWork = () => {
 							Войти
 						</Button>
 					</div>
-					<Image src={ImageHow} alt='Img' />
+					<Image src={ImageHow} alt='Img' className='work__absolute-image' />
 				</div>
 				<Image src={HowToWorkImg} alt='Img' className='work__info-image' />
 			</div>

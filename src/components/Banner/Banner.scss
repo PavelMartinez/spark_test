@@ -61,10 +61,15 @@
         &-title {
             white-space: nowrap;
 
+            @include mobile {
+                white-space: normal;
+            }
+
 
             &-h1 {
                 @include mobile {
                     @include font-inter-32-bold;
+                    white-space: nowrap;
                 }
             }
             

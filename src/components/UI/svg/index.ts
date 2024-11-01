@@ -21,3 +21,8 @@ export { default as FacebookIcon } from './FacebookIcon.svg'
 export { default as PinterestIcon } from './PinterestIcon.svg'
 export { default as XIcon } from './XIcon.svg'
 export { default as LogoFooterMob } from './LogoFooterMob.svg'
+
+
+export { default as AchievSvg1 } from './AchievSvg1.svg'
+export { default as AchievSvg2 } from './AchievSvg2.svg'
+export { default as AchievSvg3 } from './AchievSvg3.svg'

@@ -29,7 +29,7 @@ function Header() {
 					<Button variant='leftIcon' size='s' color='blue' icon={<ButtonSvg />}>
 						GENERATE
 					</Button>
-					<Navbar />
+					<Navbar className='hidden-desktop' />
 				</div>
 				<div className='header__right'>
 					<LanguageSelector

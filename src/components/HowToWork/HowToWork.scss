@@ -3,20 +3,45 @@
         margin-top: 50px;
         margin-bottom: 50px;
 
+        @include mobile {
+          
+        }
+
         &__info {
+            @include mobile {
+                margin: 40px 0;
+                padding: 0 30px;
+            }
+
             &-text {
                 color: var(--color-white, #ffffff);
+                
+                @include mobile {
+                    @include font-inter-14-regular;
+                    margin-bottom: 30px;
+                }
             }
 
             &-title {
                 white-space: nowrap;
                 @include font-inter-44-bold;
                 color: var(--color-white, #ffffff);
+
+                @include mobile {
+                    @include font-inter-32-bold;
+                }
             }
 
             &-image {
                 border-radius: var(--border-radius);
                 background: linear-gradient(to right, #9FCCFA, #49C4CC);
+                object-fit: cover;
+                width: 100%;
+
+                @include mobile {
+                    height: 623px;
+                }
+                
             }
         }
         
@@ -29,6 +54,16 @@
             padding-inline: 91px 54px;
             
             width: 100%;
+
+            &-image {
+                object-fit: cover;
+                
+            }
+
+            @include mobile {
+                @include flex-column(5);
+                padding-inline: 0;
+            }
         }
 
         &-left {

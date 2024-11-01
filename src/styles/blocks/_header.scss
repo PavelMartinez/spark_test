@@ -3,10 +3,17 @@
     margin: auto;
     background-color: #fff;
 
+    height: 128px;
+
     border-radius: 0 0 20px 20px;
+    
 
     @include mobile {
         height: 70px;
+    }
+
+    @include tablet {
+        height: 90px;
     }
 
     &__mobile {
@@ -20,8 +27,8 @@
     }
     
     &__inner {
-        @include flex-row(0, space-between);
-        padding-block: 34px;
+        @include flex-row(15, space-between);
+        
         width: 100%;
     }
 
