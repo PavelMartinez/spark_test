@@ -21,8 +21,17 @@
 
         &-image {
            
-            object-fit: cover;
-            height: auto
+            
+            height: auto;
+
+            &-left {
+                @include mobile {
+                    height: 521px;
+                    object-fit: cover;
+                }
+            }
+
+
             
         }
        

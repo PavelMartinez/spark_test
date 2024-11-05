@@ -25,10 +25,10 @@ const ButtonContent: React.FC<ButtonProps> = ({
 					props.className ? props.className : ''
 				}`}
 			>
-		
+				<div className='button__content'>
 					<div className={`button__icon button__size-${size}`}>{icon}</div>
 					<div className='button__text'>{children}</div>
-				
+				</div>
 			</button>
 		)
 	}
@@ -42,8 +42,8 @@ const ButtonContent: React.FC<ButtonProps> = ({
 				}`}
 			>
 				<div className='button__content'>
+					{icon}
 					<div className='button__text'>{children}</div>
-					<div className={`button__icon button__size-${size}`}>{icon}</div>
 				</div>
 			</button>
 		)

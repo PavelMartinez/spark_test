@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonSvg, Login, Logo, LogoHeaderMob, FlagSvgRu, AltArrowDown, ButtonMobSvg } from '../UI/svg'
+import { Logo, LogoHeaderMob, FlagSvgRu, AltArrowDown, ButtonMobSvg, MagicStickSvg } from '../UI/svg'
 import Button from '../UI/primitives/Button/Button'
 import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
@@ -26,7 +26,12 @@ function Header() {
 					<div className='header__logo logo'>
 						<Logo />
 					</div>
-					<Button variant='leftIcon' size='s' color='blue' icon={<ButtonSvg />}>
+					<Button
+						variant='leftIcon'
+						size='s'
+						color='blue'
+						icon={<MagicStickSvg />}
+					>
 						GENERATE
 					</Button>
 					<Navbar className='hidden-desktop' />
@@ -43,7 +48,7 @@ function Header() {
 						variant='leftIcon'
 						size='s'
 						color='green'
-						icon={<Login width='50' height='50' />}
+						icon={<ButtonMobSvg className='color-green' />}
 					>
 						LOGIN
 					</Button>

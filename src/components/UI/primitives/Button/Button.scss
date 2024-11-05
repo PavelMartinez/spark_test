@@ -7,7 +7,11 @@
     border-radius: 150px; 
     padding-inline: 60px;
     cursor: pointer;
-    box-sizing: border-box;
+    // box-sizing: border-box;
+ 
+    transition-duration: var(--transition-duration);
+
+   
 
 
     &__content {
@@ -17,15 +21,28 @@
 
 
     &--variant {
+
+        &-default {
+            .button__icon {
+                display: none;
+            }
+        }
         
        &-leftIcon {
             
             padding: 5px 40px 5px 5px;
             gap: 15px;
+
+            
         }
 
         &-rightIcon {
             gap: 10px;
+            
+            .button__content {
+                flex-direction: row-reverse;
+            }
+
             
         }
 
@@ -90,9 +107,20 @@
         &-blue {
             color: var(--color-white, #ffffff);
             background: var(--color-blue, #009CFF);
+
+            .button__content div:first-child {
+                background-color: #36B1FF;
+            }
+
             @include hover {
+                
                 box-shadow: 0 0 19px 0 rgba(19, 101, 211, 0.15);
                 background: var(--color-blue-dark, #2685E4);
+                
+                .button__content div:first-child {
+                    transition-duration: var(--transition-duration);
+                    background-color: #3196FB;
+                }
             }
 
         }
@@ -100,9 +128,23 @@
         &-green {
             color: var(--color-white, #ffffff);
             background: var(--color-green, #49C4CC);
-            stroke: var(--color-white, #ffffff);
+
+            .color-green g:first-child {
+                stroke: var(--color-green, #49C4CC);
+                
+            }
+
+            .button__content div:first-child {
+                background-color: var(--color-white, #ffffff);
+            }
+
             @include hover {
                 background: var(--color-green-dark, #40B3BA);
+                .color-green g:first-child {
+                    stroke: var(--color-green-dark, #40B3BA);
+                
+                }
+
             }
         }
     }
@@ -114,9 +156,15 @@
         @include flex-center;
         
         flex: 0 0 auto;
+
+        background-color: var(--color-white, #ffffff);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
     }
 
     &__text {
         margin: auto;
     }
 }
+

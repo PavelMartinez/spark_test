@@ -12,7 +12,7 @@ const Banner = () => {
 			<div className='banner'>
 				<div className='banner__inner'>
 					<div className='banner__item'>
-						<div className='banner__left-center'>
+						<div className='banner__item-center'>
 							<div className='banner__text'>
 								<div className='banner__text-tag'>
 									<span className='banner__text-tag-fire'>🔥</span>
@@ -52,7 +52,7 @@ const Banner = () => {
 								</div>
 							</div>
 						</div>
-						<Image src={ImgLeft} alt='ImgLeft' width={707} height={677} className='banner__left-image'/>
+						<Image src={ImgLeft} alt='ImgLeft' width={707} height={677} className='banner__item-image banner__item-image-left'/>
 					</div>
 					<div className='banner__item'>
 						<Image src={Img} alt='Img' width={707} height={677} className='banner__item-image'/>
