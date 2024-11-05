@@ -1,5 +1,8 @@
-import { AchievSvg1, AchievSvg2, AchievSvg3 } from '../UI/svg'
+import AchievImg1 from '../../../public/Icons/AchievImg1.png'
+import AchievImg2 from '../../../public/Icons/AchievImg2.png'
+import AchievImg3 from '../../../public/Icons/AchievImg3.png'
 import './Achievements.scss'
+import Image from 'next/image'
 
 const Achievements = () => {
     return (
@@ -7,7 +10,7 @@ const Achievements = () => {
 				<ul className='achievements-list'>
 					<li className='achievements-item'>
 						<div className='achievements-item__content'>
-							<AchievSvg1 className='achievements-item__icon' />
+							<Image src={AchievImg1} alt='AchievImg1' className='achievements-item__icon' />
 							<div className='achievements-item__text'>
 								<h3 className='achievements-item__text-title'>100 000+</h3>
 								<p className='achievements-item__text-description'>
@@ -18,7 +21,7 @@ const Achievements = () => {
 					</li>
 					<li className='achievements-item'>
 						<div className='achievements-item__content'>
-							<AchievSvg2 className='achievements-item__icon' />
+							<Image src={AchievImg2} alt='AchievImg2' className='achievements-item__icon' />
 							<div className='achievements-item__text'>
 								<h3 className='achievements-item__text-title'>User-friendly</h3>
 								<p className='achievements-item__text-description'>
@@ -29,7 +32,7 @@ const Achievements = () => {
 					</li>
 					<li className='achievements-item'>
 						<div className='achievements-item__content'>
-							<AchievSvg3 className='achievements-item__icon' />
+							<Image src={AchievImg3} alt='AchievImg3' className='achievements-item__icon' />
 							<div className='achievements-item__text'>
 								<h3 className='achievements-item__text-title'>Realistic</h3>
 								<p className='achievements-item__text-description'>

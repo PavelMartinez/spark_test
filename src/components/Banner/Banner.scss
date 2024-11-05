@@ -9,7 +9,7 @@
         }
     }
 
-    &__left {
+    &__item {
         position: relative;
         background-color: var(--color-white, #ffffff);
         border-radius: var(--border-radius);
@@ -22,6 +22,7 @@
         &-image {
            
             object-fit: cover;
+            height: auto
             
         }
        
