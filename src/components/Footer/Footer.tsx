@@ -1,5 +1,5 @@
 
-import { Logo, LogoFooterMob, Login, ButtonSvg, YoutubeIcon, InstIcon, InIcon, FacebookIcon, PinterestIcon, XIcon } from '../UI/svg';
+import { Logo, LogoFooterMob, ButtonMobSvg, MagicStickSvg, YoutubeIcon, InstIcon, InIcon, FacebookIcon, PinterestIcon, XIcon } from '../UI/svg';
 import Button from '../UI/primitives/Button/Button';
 import Navbar from '../Navbar/Navbar';
 import Link from 'next/link';
@@ -19,17 +19,17 @@ export const Footer = () => {
 					<div className='footer-top'>
 						<div className='footer-top__row'>
 							<div className='footer-top__logo visible-mobile'>
-								<LogoFooterMob  />
+								<LogoFooterMob />
 							</div>
 							<div className='footer-top__logo hidden-mobile'>
 								<Logo />
 							</div>
 							<div className='footer-top__menu'>
 								<Button
-									variant='leftIcon'
+									variant='lefticon'
 									size='s'
 									color='blue'
-									icon={<ButtonSvg />}
+									icon={<MagicStickSvg />}
 								>
 									GENERATE
 								</Button>
@@ -77,10 +77,10 @@ export const Footer = () => {
 									<Generation />
 								</div>
 								<Button
-									variant='leftIcon'
+									variant='lefticon'
 									size='s'
 									color='green'
-									icon={<Login />}
+									icon={<ButtonMobSvg className='color-green' />}
 									className='footer-top__buttons-button'
 								>
 									LOGIN
@@ -88,6 +88,7 @@ export const Footer = () => {
 							</div>
 						</div>
 					</div>
+					<hr className='footer__hr' />
 					<div className='footer-bottom'>
 						<div className='footer__info'>
 							<ul className='footer__info-list'>

@@ -1,7 +1,7 @@
 import './Button.scss'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	variant?: 'leftIcon' | 'rightIcon' | 'default'
+	variant?: 'lefticon' | 'righticon' | 'default'
 	size?: 'M' | 'S' | 'm' | 's' | 'xl' | 'XL'
 	color?: 'blue' | 'green' | 'white' | 'outline'
 	children?: React.ReactNode
@@ -10,14 +10,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const ButtonContent: React.FC<ButtonProps> = ({
-	variant = 'leftIcon',
+	variant = 'lefticon',
 	size = 'S',
 	color = 'outline',
 	children,
 	icon,
 	...props
 }) => {
-	if (variant === 'leftIcon' || variant === 'default') {
+	if (variant === 'lefticon' || variant === 'default') {
 		return (
 			<button
 				{...props}
@@ -33,7 +33,7 @@ const ButtonContent: React.FC<ButtonProps> = ({
 		)
 	}
 
-	if (variant === 'rightIcon') {
+	if (variant === 'righticon') {
 		return (
 			<button
 				{...props}

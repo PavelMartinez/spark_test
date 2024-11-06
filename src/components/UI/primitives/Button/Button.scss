@@ -7,7 +7,6 @@
     border-radius: 150px; 
     padding-inline: 60px;
     cursor: pointer;
-    // box-sizing: border-box;
  
     transition-duration: var(--transition-duration);
 
@@ -28,7 +27,7 @@
             }
         }
         
-       &-leftIcon {
+       &-lefticon {
             
             padding: 5px 40px 5px 5px;
             gap: 15px;
@@ -36,7 +35,7 @@
             
         }
 
-        &-rightIcon {
+        &-righticon {
             gap: 10px;
             
             .button__content {
@@ -52,6 +51,16 @@
         &-M, &-m {
             @include font-inter-16-medium;
             height: 72px;
+
+            @include desktop {
+                padding-inline: 40px;
+            }
+
+            @include tablet {
+                height: 60px;
+                padding-inline: 30px;
+                
+            }
 
             @include mobile {
                 @include font-inter-14-regular;
@@ -69,12 +78,24 @@
         &-XL, &-xl {
             @include font-inter-16-medium;
             height: 72px;
-            width: 488px;
+            padding-inline: 165px;
+
+            @include desktop {
+                padding-inline: 126px;
+            }
+
+            @include tablet {
+                height: 60px;
+                padding-inline: 106px;
+                
+            }
+
 
             @include mobile {
                 @include font-inter-14-regular;
                 height: 52px;
                 width: 100%;
+                padding-inline: 0;
                 
             }
         }
@@ -97,9 +118,26 @@
         &-white {
             color: var(--color-dark, #11133A);
             background: var(--color-white, #ffffff);
+
+            .button__content div:first-child {
+                background-color: var(--color-gray1, #F8F8F8);
+            }
+
+            .color-white g:first-child {
+                stroke: var(--color-dark, #11133A);
+                
+            }
             
             @include hover {
-                background: var(--color-blue-010, #E0EBF2);
+                .button__content div:first-child {
+                    transition-duration: var(--transition-duration);
+                    background-color: var(--color-dark, #11133A);
+                }
+
+                .color-white g:first-child {
+                stroke: var(--color-white, #ffffff);
+                
+            }
             }
         }
         
@@ -159,12 +197,15 @@
 
         background-color: var(--color-white, #ffffff);
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        
+        @include square(50px);
+
+
     }
 
     &__text {
         margin: auto;
+        white-space: nowrap;
     }
 }
 

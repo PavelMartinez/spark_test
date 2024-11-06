@@ -8,16 +8,27 @@
         }
 
         &__info {
+             color: var(--color-white, #ffffff);
             @include mobile {
-                margin: 40px 0;
                 padding: 0 30px;
             }
 
+            &-button {
+                padding: 5px 40px 5px 5px;
+                @include mobile {
+                    .button__content div:first-child {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+
             &-text {
-                color: var(--color-white, #ffffff);
+                @include tablet {
+                    font-size: 14px;
+                }
                 
                 @include mobile {
-                    @include font-inter-14-regular;
                     margin-bottom: 30px;
                 }
             }
@@ -27,8 +38,16 @@
                 @include font-inter-44-bold;
                 color: var(--color-white, #ffffff);
 
+                @include desktop {
+                    font-size: 40px;
+                }
+
+                @include tablet {
+                    font-size: 32px;
+                }
+
                 @include mobile {
-                    @include font-inter-32-bold;
+                    font-size: 28px;
                 }
             }
 
@@ -38,9 +57,15 @@
                 object-fit: cover;
                 width: 100%;
 
+                @include tablet {
+                    height: 623px;
+                    background: linear-gradient(to top, #9FCCFA, #49C4CC);
+                }
+
                 @include mobile {
                     height: 623px;
                 }
+
                 
             }
         }
@@ -56,8 +81,22 @@
             width: 100%;
 
             &-image {
+                height: auto;
                 object-fit: cover;
+
+                @include desktop {
+                    width: 400px;
+                }
+
+                @include tablet {
+                    width: auto;
+                }
                 
+            }
+
+            @include tablet {
+                @include flex-column(5);
+                padding-inline: 0;
             }
 
             @include mobile {

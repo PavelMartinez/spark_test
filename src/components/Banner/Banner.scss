@@ -17,6 +17,9 @@
         &-center {
             @include abs-center;
             @include flex-column(40);
+            @include desktop {
+                gap: 20px;
+            }
         }
 
         &-image {
@@ -61,8 +64,12 @@
             &-p {
                 @include font-inter-14-regular;
 
+                @include tablet {
+                    font-size: 12px;
+                }
+
                 @include mobile {
-                    @include font-inter-12-regular;
+                    font-size: 12px;
                 }
 
             }
@@ -71,15 +78,33 @@
         &-title {
             white-space: nowrap;
 
-            @include mobile {
+            @include desktop {
                 white-space: normal;
+            }
+
+            @include tablet {
+                font-size: 14px;
+            }
+
+
+            @include mobile {
+                @include font-inter-14-regular;
             }
 
 
             &-h1 {
+                white-space: nowrap;
+
+                @include desktop {
+                    font-size: 44px;
+                }
+
+                @include tablet {
+                    font-size: 32px;
+                }
+
                 @include mobile {
-                    @include font-inter-32-bold;
-                    white-space: nowrap;
+                    font-size: 28px;
                 }
             }
             

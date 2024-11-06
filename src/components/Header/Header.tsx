@@ -27,7 +27,7 @@ function Header() {
 						<Logo />
 					</div>
 					<Button
-						variant='leftIcon'
+						variant='lefticon'
 						size='s'
 						color='blue'
 						icon={<MagicStickSvg />}
@@ -45,7 +45,7 @@ function Header() {
 					</LanguageSelector>
 					<Generation leftIcon={<FlagSvgRu />} rightIcon={<FlagSvgRu />} />
 					<Button
-						variant='leftIcon'
+						variant='lefticon'
 						size='s'
 						color='green'
 						icon={<ButtonMobSvg className='color-green' />}

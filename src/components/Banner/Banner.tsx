@@ -29,7 +29,7 @@ const Banner = () => {
 							<div className='banner__buttons'>
 								<div className='banner__buttons-top'>
 									<Button
-										variant='rightIcon'
+										variant='righticon'
 										color='blue'
 										size='xl'
 										icon={<TelegramSvg />}
@@ -39,7 +39,7 @@ const Banner = () => {
 								</div>
 								<div className='banner__buttons-bottom'>
 									<Button
-										variant='rightIcon'
+										variant='righticon'
 										color='green'
 										size='M'
 										icon={<UploadSvg  />}
