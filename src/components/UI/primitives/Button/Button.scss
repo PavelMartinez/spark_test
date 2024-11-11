@@ -123,10 +123,7 @@
                 background-color: var(--color-gray1, #F8F8F8);
             }
 
-            .color-white g:first-child {
-                stroke: var(--color-dark, #11133A);
-                
-            }
+            
             
             @include hover {
                 .button__content div:first-child {
@@ -167,11 +164,6 @@
             color: var(--color-white, #ffffff);
             background: var(--color-green, #49C4CC);
 
-            .color-green g:first-child {
-                stroke: var(--color-green, #49C4CC);
-                
-            }
-
             .button__content div:first-child {
                 background-color: var(--color-white, #ffffff);
             }
@@ -185,6 +177,18 @@
 
             }
         }
+    }
+
+    .color-white g:first-child {
+        stroke: var(--color-dark, #11133A);          
+    }
+
+    .color-green g:first-child {
+        stroke: var(--color-green, #49C4CC);          
+    }
+
+    .color-dark path:nth-child(n) {
+        stroke: var(--color-dark, #11133A);          
     }
 
 

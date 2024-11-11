@@ -7,6 +7,7 @@ export {default as FlagSvgRu} from './Flag-ru.svg'
 export {default as LogoHeaderMob} from './LogoHeaderMob.svg'
 export {default as ButtonMobSvg} from './ButtonMobSvg.svg'
 export { default as WhiteButtonSvg } from './WhiteButtonSvg.svg'
+export { default as ArrowRightUp } from './ArrowRightUp.svg'
 
 
 // Banner

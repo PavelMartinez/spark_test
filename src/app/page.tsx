@@ -8,6 +8,8 @@ import Banner from '@/components/Banner/Banner'
 import HowToWork from '@/components/HowToWork/HowToWork'
 import Achievements from '@/components/Achievements/Achievements'
 import FrequentlyAskedQuestions from '@/components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
+import UseGenerator from '@/components/UseGenerator/UseGenerator'
+import Slider from '@/components/Slider/Slider'
 
 
 export default function Home() {
@@ -43,8 +45,11 @@ export default function Home() {
 				</Link>
 			</div>
 			<HowToWork />
-			<Achievements /> 
+			<Achievements />
+			<Slider />
 			<FrequentlyAskedQuestions />
+			<UseGenerator />
+			
 		</main>
 	)
 }
