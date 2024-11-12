@@ -15,7 +15,9 @@ import Slider from '@/components/Slider/Slider'
 export default function Home() {
   return (
 		<main className='home container'>
-			<Banner />
+			<div className='reset-marigin'>
+				<Banner />
+			</div>
 			<div className='home__buttons'>
 				<Link href='/instructions/ios' className='home__buttons-item'>
 					<Image
@@ -44,12 +46,17 @@ export default function Home() {
 					</div>
 				</Link>
 			</div>
-			<HowToWork />
+			<div className='reset-marigin'>
+				<HowToWork />
+			</div>
 			<Achievements />
-			<Slider />
+			<div className='reset-marigin'>
+				<Slider />
+			</div>
 			<FrequentlyAskedQuestions />
-			<UseGenerator />
-			
+			<div className='reset-marigin'>
+				<UseGenerator />
+			</div>
 		</main>
 	)
 }

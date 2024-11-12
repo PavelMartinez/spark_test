@@ -47,3 +47,8 @@
 }
 
 
+.reset-marigin {
+    @include mobile {
+        margin-inline: -20px;
+    }
+}

@@ -5,8 +5,17 @@
   border-radius: var(--border-radius);
   padding-block:  80px;
 
+  @include mobile {
+    padding-block:  30px;
+  }
+
   &__image {
     border-radius: 12.9px;
+
+    @include tablet {
+      width: 300px;
+      height: 400px;
+    }
   }
 
   &__item {
@@ -19,6 +28,10 @@
       color: var(--color-white, #ffffff);
       font-size: 25.8px;
       text-transform: uppercase;
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
   }
 
@@ -28,8 +41,31 @@
   @include flex-row(80, space-between);
   padding-inline: 80px 0;
 
+  @include desktop {
+    gap: 60px;
+  }
+
+  @include tablet {
+    gap: 40px;
+  }
+
+  @include mobile {
+    @include flex-column(30);
+    padding-inline: 0;
+  }
+
   &__left {
     @include flex-column(30);
+
+    @include mobile {
+      padding-inline: 30px;
+    }
+  }
+
+  &__right {
+    @include mobile {
+      padding-inline: 30px 0;
+    }
   }
 
   &__text {
@@ -38,6 +74,19 @@
     &-title {
       @include font-inter-44-bold;
       color: var(--color-dark, #11133A);
+      white-space: nowrap;
+
+      @include desktop {
+        font-size: 40px;
+      }
+
+      @include tablet {
+        font-size: 32px;
+      }
+
+      @include mobile {
+        font-size: 28px;
+      }
     }
 
     &-description {
@@ -55,13 +104,17 @@
   @include flex-column(30);
   padding-inline: 80px ;
 
+  @include mobile {
+    padding-inline: 30px;
+  }
+
   &__button-view {
     width: 100%;
   }
 }
 
 .mySwiper {
-  width: 952px;
+  width: 100%;
   border-radius: 12.9px 0 0 12.9px;
 }
 
@@ -87,6 +140,10 @@
   border-radius: 50px;
   width: 68px;
   height: 68px;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .swiper-button-next::after,
@@ -114,4 +171,8 @@
 
 .swiper-slide-active {
   opacity: 0.8;
+
+  @include mobile {
+    opacity: 1;
+  }
 }

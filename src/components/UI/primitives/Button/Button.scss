@@ -53,17 +53,15 @@
             height: 72px;
 
             @include desktop {
-                padding-inline: 40px;
+                
             }
 
             @include tablet {
                 height: 60px;
-                padding-inline: 30px;
-                
             }
 
             @include mobile {
-                @include font-inter-14-regular;
+                font-size: 14px;
                 height: 52px;
             }
                 

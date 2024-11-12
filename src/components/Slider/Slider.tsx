@@ -20,7 +20,7 @@ import './Slider.scss'
 
 const Slider = () => {
 	// Временная функция map()* для теста карточек
-	const renderSlides = count => {
+	const renderSlides = (count: number) => {
 		return Array.from({ length: count }, (_, index) => (
 			<SwiperSlide key={index} className='slider__item'>
 				<Image alt='Woman' src={Image1} className='slider__image' />
