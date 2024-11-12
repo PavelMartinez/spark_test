@@ -10,6 +10,7 @@ import Achievements from '@/components/Achievements/Achievements'
 import FrequentlyAskedQuestions from '@/components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
 import UseGenerator from '@/components/UseGenerator/UseGenerator'
 import Slider from '@/components/Slider/Slider'
+import HowToWorks from '@/components/HowToWorks/HowToWorks'
 
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
 				<HowToWork />
 			</div>
 			<Achievements />
+			<HowToWorks/>
 			<div className='reset-marigin'>
 				<Slider />
 			</div>
