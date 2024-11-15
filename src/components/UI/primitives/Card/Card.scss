@@ -1,0 +1,226 @@
+.card {
+    @include flex-column(20);
+            flex: 0 0 auto;
+            border-radius: 30px;
+            background-color: var(--color-white);
+            padding: 30px 40px;
+
+    &-top {
+        @include flex-column(10);
+
+        &__top {
+            @include flex-row(10, space-between);
+            &-sale {
+                max-height: 30px;
+                padding: 3px 12px;
+                background-color: #F15322;
+                border-radius: var(--border-radius);
+                color: var(--color-white);
+                
+            }
+
+            &-coins {
+                @include flex-row(4);
+                align-items: center;
+                background-color: var(--color-white);
+                border-radius: var(--border-radius);
+                border: 1px solid #42424226;
+                padding: 4px 10px;
+            }
+        }
+
+        &__bottom {
+            @include flex-row(20);
+
+            &-icon {
+                @include flex-center;
+                @include square(80px);
+                background-color: var(--color-gray2);
+                border-radius: var(--border-radius);
+            }
+
+            &-text {
+                @include flex-column(8);
+                color: var(--color-dark);
+                font-weight: 600;
+                line-height: 100%;
+                
+
+                
+                &-title {
+                    color: var(--color-dark);
+                    font-size: 18px;
+                    line-height: 120%;
+                }
+
+                &-price {
+                    @include flex-row(10, space-between);
+
+                    &-left {
+                        @include flex-column(4);
+                    }
+
+                    &-old {
+                        opacity: 0.5;
+                        line-height: 150%;
+                        font-size: 14px
+                    }
+
+                    &-new {
+                        @include font-inter-32-bold;
+                        font-size: 28px;
+                        line-height: 100%;
+                    }
+
+                    &-name {
+                        @include flex-row(10);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    &-bottom {
+        @include flex-column(20);
+        border-top: 1px solid var(--color-gray5);
+
+        &__top {
+            padding-top: 20px;
+
+            &-item {
+                @include flex-row(13);
+                align-items: center;
+                background-color: var(--color-gray1);
+                border-radius: 10px;
+
+                &--active {
+                    background-color: #FFFFFF00;
+                }
+
+                &-icon {
+                    @include flex-center;
+                    @include square(56px);
+                    border-radius: 10px;
+                    background-color: #F2F0ED;
+
+                    &--active {
+                        background-color: #FCFCFC;
+                    }
+                }
+
+                &-text {
+                    color: var(--color-gray7);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__bottom {
+            &-button {
+
+                width: 100%;
+            }
+        }
+    }
+
+    &--variant {
+        &-popular {
+
+            
+            background: linear-gradient(135deg, #9FCCFA, #49C4CC);
+            gap: 11px !important;
+            padding-inline: 30px !important;
+            .card-top{
+                &__top {
+                    &-popular {
+                        position: absolute;
+                        top: -20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        padding: 7px 20px;
+                        align-items: center;
+                        background-color: #FFC33F;
+                        border-radius: 50px;
+
+                        color: var(--color-white);
+                    }
+                }
+                &__bottom {
+                    
+                    &-icon {
+                        @include square(100px);
+                        background-color: var(--color-white);
+                    }
+
+                    &-text {
+                        color: var(--color-white);
+                        gap: 10px;
+                        &-title {
+                            font-size: 20px;
+                            color: var(--color-white);
+                            font-weight: 600;
+                        }
+
+                        &-price {
+                            margin-right: 33px;
+                            &-new {
+                                font-size: 36px;
+                                font-weight: 600;
+                            }
+
+                            &-old {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-bottom {
+                border-top: 1px solid var(--color-white);
+                gap: 30px;
+                &__top {
+                    padding-top: 25px;
+
+                    &-item {
+                        background-color: #FFFFFF26;
+
+                        &--active {
+                            background-color: transparent;
+                        }
+                        
+                        &-icon {
+                            background-color: #FFFFFF1A;
+
+                            &--active {
+                                background-color: #FFFFFF0D;
+                            }
+                        }
+
+                        &-text {
+                            color: var(--color-white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-container {
+        &::before {
+            @include abs-center;
+            content: '';
+            width: 101%;
+            height: 101%;
+            border-radius: 30px;
+            background: linear-gradient(-45deg, #E7FEFF , #76E2F8, #E7FEFF );
+            opacity: 1;
+            z-index: -1;
+        }
+    }
+}
+
+.opacity-0 {
+    opacity: 0;
+}

@@ -1,6 +1,7 @@
 .slider {
   @include flex-column(30);
-  margin-block: 50px;
+  margin-top: 90px;
+  margin-bottom: 50px;
   background: var(--color-white, #ffffff);
   border-radius: var(--border-radius);
   padding-block:  80px;

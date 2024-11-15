@@ -5,9 +5,20 @@
     border-radius: var(--border-radius);
 
     padding: 23px 18.5px 17px 18.5px;
+
+    @include mobile {
+        @include flex-column(30);
+        padding-block: 30px;
+        
+    }
+
     &__left {
         padding-top: 149px;
         padding-left: 46px;
+
+        @include mobile {
+            padding: 0;
+        }
         &-title {
             color: var(--color-dark);
             margin-bottom: 20px;
@@ -33,7 +44,8 @@
                 content: counter(list-counter) " ";
                 position: absolute;
                 left: 0;
-                top: -30%;
+                top: 50%;
+                transform: translateY(-50%);
                 height: 40px;
                 width: 40px;
                 border-radius: 50px;
@@ -45,20 +57,29 @@
 
             }
         }
+
+        &-button {
+            @include mobile {
+                width: 100%;
+            }
+        }
     }
 
     &__right {
         @include flex-column(30, space-between);
 
-        width: 502px;
-        height: 755px;
+        
+       
         background-color: var(--color-gray1);
         border-radius: var(--border-radius);
         position: relative;
 
+        @include mobile {
+            gap: 11px;
+        }
+
         &-img {
-            position: absolute;
-            bottom: 0;
+            height: auto;
             border-radius: var(--border-radius);
         }
 
@@ -76,10 +97,36 @@
             &-top {
                 height: 54px !important;
                 padding-inline: 24.5px !important;
+
+                @include mobile {    
+                    height: 46px !important;
+                    width: 85px !important;
+
+                    .button__content {
+                        font-size: 10.65px !important;
+
+                        & svg {
+                            width: 16px !important;
+                            height: 16px !important;
+                        }
+                    }
+                }
             }
             &-bottom {
-                z-index: 5;
-                margin: 0 38.5px 31px 39.5px ;
+                position: absolute;
+                bottom: 31px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 424px;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {    
+                    width: 300px;
+                    bottom: 21px;
+                }
                 
             }
         }

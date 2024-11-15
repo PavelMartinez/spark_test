@@ -23,8 +23,14 @@ export { default as PinterestIcon } from './PinterestIcon.svg'
 export { default as XIcon } from './XIcon.svg'
 export { default as LogoFooterMob } from './LogoFooterMob.svg'
 
-//Button
+// Button
 export { default as ButtonSvg } from './ButtonSvg.svg'
 export { default as Login } from './Login.svg'
 export { default as MagicStickSvg } from './MagicStickSvg.svg'
 export { default as Clothes } from './Clothes.svg'
+
+// Plans
+export { default as Incognito } from './Incognito.svg'
+export { default as CloseSquare } from './CloseSquare.svg'
+export { default as ShieldStar } from './ShieldStar.svg'
+

@@ -29,7 +29,7 @@ const HowToWorks = () => {
 						Choose a generation mode. and off you go!
 					</li>
 				</ol>
-				<Button variant='righticon' size='m' color='green' icon={<UploadSvg />}>
+				<Button variant='righticon' size='m' color='green' icon={<UploadSvg />} className='how-to-works__left-button'>
 					upLoad
 				</Button>
 			</div>
@@ -37,32 +37,31 @@ const HowToWorks = () => {
 				<div className='how-to-works__right-top'>
 					<ul className='how-to-works__right-top-list'>
 						<li className='how-to-works__right-top-item'>
-                            <Image
-                                src={ImgHTWs1}
-                                alt='ImgHTWs1'
-                                className='how-to-works__right-top-icon'
-                            />
-                        </li>
-                        <li className='how-to-works__right-top-item'>
-                            <Image
-                                src={ImgHTWs2}
-                                alt='ImgHTWs2'
-                                className='how-to-works__right-top-icon'
-                            />
-                        </li>
-                        <li className='how-to-works__right-top-item'>
-                            <Image
-                                src={ImgHTWs3}
-                                alt='ImgHTWs3'
-                                className='how-to-works__right-top-icon'
-                            />
-                        </li>
+							<Image
+								src={ImgHTWs1}
+								alt='ImgHTWs1'
+								className='how-to-works__right-top-icon'
+							/>
+						</li>
+						<li className='how-to-works__right-top-item'>
+							<Image
+								src={ImgHTWs2}
+								alt='ImgHTWs2'
+								className='how-to-works__right-top-icon'
+							/>
+						</li>
+						<li className='how-to-works__right-top-item'>
+							<Image
+								src={ImgHTWs3}
+								alt='ImgHTWs3'
+								className='how-to-works__right-top-icon'
+							/>
+						</li>
 					</ul>
 					<Button
 						variant='righticon'
-						
 						color='green'
-						icon={<UploadSvg />}
+						icon={<UploadSvg  />}
 						className='how-to-works__right-button-top'
 					>
 						Load

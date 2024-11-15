@@ -15,11 +15,13 @@ const FrequentlyAskedQuestions = () => {
 						<label className='item__label' htmlFor='question-1'></label>
 
 						<p className='item__answer' id='answer-1'>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolores vero iusto dolore et pariatur blanditiis eius eum praesentium nesciunt explicabo, quos temporibus exercitationem ipsa laudantium magni asperiores excepturi? Voluptatum?
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+							dolores vero iusto dolore et pariatur blanditiis eius eum
+							praesentium nesciunt explicabo, quos temporibus exercitationem
+							ipsa laudantium magni asperiores excepturi? Voluptatum?
 						</p>
 					</div>
 					<div className='item'>
-						{/* <div className='item__content'> */}
 							<h3 className='item__text'>
 								Что делать, если я получу плохой результат?
 							</h3>
@@ -28,9 +30,7 @@ const FrequentlyAskedQuestions = () => {
 								className='item__checkbox'
 								id='question-2'
 							/>
-							<label className='item__label' htmlFor='question-2'></label>
-						{/* </div> */}
-
+						<label className='item__label' htmlFor='question-2'></label>
 						<p className='item__answer' id='answer-2'>
 							К сожалению, мы не можем Вам всегда гарантировать хороший
 							результат. Но это на 90% зависит от того, какое фото вы

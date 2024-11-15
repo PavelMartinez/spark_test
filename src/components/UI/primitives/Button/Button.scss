@@ -16,6 +16,7 @@
     &__content {
         @include flex-row(10);
         margin: auto;
+        align-items:center;
     }
 
 
