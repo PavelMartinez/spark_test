@@ -122,7 +122,14 @@ const Plans = () => {
 									/>,
 								],
 							}}
-							iconMain={<Image src={EmojiRocket} alt='EmojiRocket' width={60} height={60} />}
+							iconMain={
+								<Image
+									src={EmojiRocket}
+									alt='EmojiRocket'
+									width={60}
+									height={60}
+								/>
+							}
 							className='absolute-center'
 						/>
 						<Card
@@ -190,7 +197,7 @@ const Plans = () => {
 						<h3 className='plans-bottom__item-title'>SECURE PAYMENTS</h3>
 						<p className='plans-bottom__item-description'>
 							Pay securely with confidence using credit card or crypto. Your
-							bank statement will show 'JOYAI'.
+							bank statement will show &apos;JOYAI&apos;.
 						</p>
 					</div>
 					<div className='dashed-line'></div>
@@ -211,8 +218,8 @@ const Plans = () => {
 						</div>
 						<h3 className='plans-bottom__item-title'>NO AUTO-RENEWAL</h3>
 						<p className='plans-bottom__item-description'>
-							To ensure you only pay for our product when you're actually using
-							it, we will not charge you automatically.
+							To ensure you only pay for our product when you&apos;re actually
+							using it, we will not charge you automatically.
 						</p>
 					</div>
 				</div>
