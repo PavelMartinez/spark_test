@@ -1,0 +1,135 @@
+.how-to-works {
+    @include flex-row(30, space-between);
+    
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+
+    padding: 23px 18.5px 17px 18.5px;
+
+    @include mobile {
+        @include flex-column(30);
+        padding-block: 30px;
+        
+    }
+
+    &__left {
+        padding-top: 149px;
+        padding-left: 46px;
+
+        @include mobile {
+            padding: 0;
+        }
+        &-title {
+            color: var(--color-dark);
+            margin-bottom: 20px;
+        }
+
+        &-list {
+            @include flex-column(20);
+            list-style-type: none;
+            counter-reset: list-counter;
+            margin-bottom: 30px;
+        }
+
+        &-item {
+            @include font-inter-16-semibold;
+            counter-increment: list-counter;
+            position: relative;
+            padding-left: 50px;
+            color: var(--color-gray7, #515266);
+
+           
+
+            &::before {
+                content: counter(list-counter) " ";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 40px;
+                width: 40px;
+                border-radius: 50px;
+                background-color:#49C4CC15 ;
+                color: var(--color-green);
+                text-align: center;
+                line-height: 40px;
+                
+
+            }
+        }
+
+        &-button {
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    &__right {
+        @include flex-column(30, space-between);
+
+        
+       
+        background-color: var(--color-gray1);
+        border-radius: var(--border-radius);
+        position: relative;
+
+        @include mobile {
+            gap: 11px;
+        }
+
+        &-img {
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+
+        &-top {
+            @include flex-row(30, space-between);
+            align-items: center;
+            padding: 11px 8px 0 10px;
+
+            &-list {
+                @include flex-row(11);
+            }
+        }
+
+        &-button {
+            &-top {
+                height: 54px !important;
+                padding-inline: 24.5px !important;
+
+                @include mobile {    
+                    height: 46px !important;
+                    width: 85px !important;
+
+                    .button__content {
+                        font-size: 10.65px !important;
+
+                        & svg {
+                            width: 16px !important;
+                            height: 16px !important;
+                        }
+                    }
+                }
+            }
+            &-bottom {
+                position: absolute;
+                bottom: 31px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 424px;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {    
+                    width: 300px;
+                    bottom: 21px;
+                }
+                
+            }
+        }
+    }
+}
+

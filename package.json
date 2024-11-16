@@ -16,7 +16,8 @@
 		"react": "^18",
 		"react-dom": "^18",
 		"sass": "^1.80.2",
-		"scss": "^0.2.4"
+		"scss": "^0.2.4",
+		"swiper": "^11.1.14"
 	},
 	"devDependencies": {
 		"@svgr/webpack": "^8.1.0",
