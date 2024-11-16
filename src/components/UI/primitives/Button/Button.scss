@@ -1,51 +1,193 @@
 .button {
     @include reset-button;
     display: inline-flex;
-    gap: 16px;
+    
     align-items: center;
 
+    border-radius: 150px; 
+    padding-inline: 60px;
     cursor: pointer;
-    box-sizing: border-box;
+ 
+    transition-duration: var(--transition-duration);
+
+   
+
+
+    &__content {
+        @include flex-row(10);
+        margin: auto;
+        align-items:center;
+    }
+
 
     &--variant {
-       &-default {
+
+        &-default {
+            .button__icon {
+                display: none;
+            }
+        }
+        
+       &-lefticon {
             
             padding: 5px 40px 5px 5px;
+            gap: 15px;
+
             
         }
 
-        &-login {
-            padding: 5px 50px 4px 5px;
+        &-righticon {
+            gap: 10px;
+            
+            .button__content {
+                flex-direction: row-reverse;
+            }
+
+            
         }
+
     }
 
     &--size {
         &-M, &-m {
+            @include font-inter-16-medium;
+            height: 72px;
+
+            @include desktop {
+                
+            }
+
+            @include tablet {
+                height: 60px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+                height: 52px;
+            }
+                
+        }
+
+        &-S, &-s {
             @include font-inter-14-regular-uppercase;
-            border-radius: 150px; 
+           height: 60px;
+            
+        }
+
+        &-XL, &-xl {
+            @include font-inter-16-medium;
+            height: 72px;
+            padding-inline: 165px;
+
+            @include desktop {
+                padding-inline: 126px;
+            }
+
+            @include tablet {
+                height: 60px;
+                padding-inline: 106px;
+                
+            }
+
+
+            @include mobile {
+                @include font-inter-14-regular;
+                height: 52px;
+                width: 100%;
+                padding-inline: 0;
+                
+            }
         }
     }
 
     &--color {
 
+        &-outline {
+            color: var(--color-gray7, #515266 );
+            border: 1px solid var(--color-gray7, #515266);
+            
+
+            @include hover {
+                color: var(--color-white, #ffffff);
+                background: var(--color-gray7, #515266);
+                
+            }
+        }
+
+        &-white {
+            color: var(--color-dark, #11133A);
+            background: var(--color-white, #ffffff);
+
+            .button__content div:first-child {
+                background-color: var(--color-gray1, #F8F8F8);
+            }
+
+            
+            
+            @include hover {
+                .button__content div:first-child {
+                    transition-duration: var(--transition-duration);
+                    background-color: var(--color-dark, #11133A);
+                }
+
+                .color-white g:first-child {
+                stroke: var(--color-white, #ffffff);
+                
+            }
+            }
+        }
         
 
         &-blue {
             color: var(--color-white, #ffffff);
             background: var(--color-blue, #009CFF);
+
+            .button__content div:first-child {
+                background-color: #36B1FF;
+            }
+
             @include hover {
+                
                 box-shadow: 0 0 19px 0 rgba(19, 101, 211, 0.15);
                 background: var(--color-blue-dark, #2685E4);
+                
+                .button__content div:first-child {
+                    transition-duration: var(--transition-duration);
+                    background-color: #3196FB;
+                }
             }
+
         }
 
         &-green {
             color: var(--color-white, #ffffff);
             background: var(--color-green, #49C4CC);
+
+            .button__content div:first-child {
+                background-color: var(--color-white, #ffffff);
+            }
+
             @include hover {
                 background: var(--color-green-dark, #40B3BA);
+                .color-green g:first-child {
+                    stroke: var(--color-green-dark, #40B3BA);
+                
+                }
+
             }
         }
+    }
+
+    .color-white g:first-child {
+        stroke: var(--color-dark, #11133A);          
+    }
+
+    .color-green g:first-child {
+        stroke: var(--color-green, #49C4CC);          
+    }
+
+    .color-dark path:nth-child(n) {
+        stroke: var(--color-dark, #11133A);          
     }
 
 
@@ -56,9 +198,17 @@
         
         flex: 0 0 auto;
 
+        background-color: var(--color-white, #ffffff);
+        border-radius: 50%;
+        
+        @include square(50px);
+
+
     }
 
     &__text {
-        margin-inline: auto;
+        margin: auto;
+        white-space: nowrap;
     }
 }
+

@@ -5,10 +5,10 @@ interface NavbarProps extends React.HTMLAttributes<HTMLDivElement> {
 	variant?: 'default' | 'footer'
 }
 
-const Navbar: React.FC<NavbarProps> = ({ variant = 'default',...props }) => {
+const Navbar: React.FC<NavbarProps> = ({ variant = 'default', className, ...props }) => {
 	if (variant === 'default') {
 		return (
-			<nav {...props} className='navbar'>
+			<nav {...props} className={`navbar ${className || ''}`}>
 				<ul className='navbar-list'>
 					<li className='navbar-list__item'>
 						<a className='navbar-list__link'>INSTRUCTION</a>

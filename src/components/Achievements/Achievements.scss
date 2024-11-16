@@ -1,0 +1,57 @@
+.achievements {
+    
+    margin-block: 50px;
+
+    &-list {
+        @include flex-row(5, center);
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    &-item {
+        background: var(--color-white, #ffffff);
+        border-radius: var(--border-radius);
+        width: 100%;
+
+        padding: 30px 33px;
+        &__content {
+            
+            @include flex-row(30);
+            align-items: center;
+            
+            
+        }
+
+        &__text {
+
+            &-title {
+                color: var(--color-brown-dark, #502C00);
+
+                @include tablet {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }   
+
+            &-description {
+                color: var(--color-brown-dark, #502C00);
+                @include font-inter-20-regular;
+
+                @include tablet {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__icon {
+            flex: 0 0 auto;
+            @include tablet {
+                height: 80px;
+                width: 80px;
+            }
+        }
+        
+    }
+}

@@ -38,6 +38,12 @@
   }
 }
 
+.hidden-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
 .svg-refill {
   @include svg-refill;
 }

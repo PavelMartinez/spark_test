@@ -1,0 +1,103 @@
+.generator {
+    z-index: -2;
+    background: linear-gradient(to right, #9FCCFA, #49C4CC);
+    border-radius: var(--border-radius);
+    height: auto;
+
+    position: relative;
+
+    margin-block: 50px;
+
+    
+    
+
+
+    @include mobile {
+        
+
+        
+    }
+
+
+    
+    &__inner {
+        @include flex-row(15, space-between);
+        align-items: center;
+        padding-inline: 80px 18px;
+
+        
+
+        @include mobile {
+            @include flex-column(20);
+            padding-inline: 0;
+            padding-top: 30px;
+            height: 450px;
+
+        }
+        
+        &-img {
+            object-fit: cover;
+            width: 300px;
+            
+
+            @include mobile {
+                flex: 1 0 100%;
+                position: absolute;
+                bottom: 0;
+                right: -50px;
+                z-index: -1;
+            }
+        }
+
+        &-text {
+            @include flex-column(11);
+            
+        }
+
+        &-title {
+            color: var(--color-white, #ffffff);
+            font-size: 44px;
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        &-description {
+            @include font-inter-16-regular;
+            color: var(--color-white, #ffffff);
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        &-upload {
+            @include flex-center;
+            flex-direction: column;
+            gap: 21px;
+            
+            height: 257px;
+            width: 324px;
+
+            border-radius: 10px;
+            background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: white; stroke-width: 4; stroke-dasharray: 15 12; stroke-dashoffset: 10; rx: 10; ry: 10; '/></svg>");
+            
+
+            @include mobile {
+                height: 193px;
+                width: 334px;
+                order:2
+            }
+
+        }
+    }
+
+    &__img {
+        @include abs-center;
+        position: absolute;
+        margin-left: 90px;
+        z-index: -1;
+         
+    }
+}
