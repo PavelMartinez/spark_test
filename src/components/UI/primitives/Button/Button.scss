@@ -51,42 +51,26 @@
     &--size {
         &-M, &-m {
             @include font-inter-16-medium;
+            @include fluid-text(16, 14);
             height: 72px;
 
-            @include desktop {
-                
-            }
-
             @include tablet {
-                height: 60px;
-            }
-
-            @include mobile {
-                font-size: 14px;
                 height: 52px;
-            }
-                
+            }   
         }
 
         &-S, &-s {
             @include font-inter-14-regular-uppercase;
-           height: 60px;
-            
+            height: 60px;  
         }
 
         &-XL, &-xl {
             @include font-inter-16-medium;
+            @include fluid-text(16, 14);
             height: 72px;
-            padding-inline: 165px;
-
-            @include desktop {
-                padding-inline: 126px;
-            }
-
+            
             @include tablet {
-                height: 60px;
-                padding-inline: 106px;
-                
+                height: 52px;                  
             }
 
 

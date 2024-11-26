@@ -1,9 +1,9 @@
 .navbar {
-    &-list {
-        @include flex-row(30);
-        // display: flex;
-        // align-items: center;
-        // column-gap: 30px;
+    max-width: 453px;
+    width: 100%;
+    &__list {
+        @include flex-row(10, space-between);
+        
 
         @include mobile {
             flex-direction: column;
@@ -12,18 +12,13 @@
         }
        
 
-        &__item {
-            display: inline-flex;
-            align-items: center;
+        &-item {
             color: #6F644D;
-
             white-space: nowrap;
-            
-
             cursor: pointer;
         }
 
-        &__link {
+        &-link {
             @include font-inter-14-regular-uppercase;
         }
     }

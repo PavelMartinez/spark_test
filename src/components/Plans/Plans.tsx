@@ -190,6 +190,7 @@ const Plans = () => {
 					</div>
 				</div>
 				<div className='plans-bottom'>
+					
 					<div className='plans-bottom__item'>
 						<div className='plans-bottom__item-icon'>
 							<ShieldStar />

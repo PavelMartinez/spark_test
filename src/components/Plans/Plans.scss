@@ -19,6 +19,12 @@
     &__cards {
         @include flex-row(20, space-between);
         position: relative;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 830px;
+        }
+        
     }
 
 }
@@ -233,6 +239,12 @@
     background: rgba(255, 255, 255, 0.3); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+
     &__item {
         padding-inline: 35px;
         width: 100%;
@@ -274,4 +286,5 @@
 
 .absolute-center {
     @include abs-center;
+    
 }

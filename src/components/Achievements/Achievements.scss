@@ -3,9 +3,9 @@
     margin-block: 50px;
 
     &-list {
-        @include flex-row(5, center);
+        @include flex-row(5);
 
-        @include mobile {
+        @include tablet {
             flex-direction: column;
         }
     }
@@ -16,9 +16,9 @@
 
         padding: 30px 33px;
         &__content {
-            
             @include flex-row(30);
             align-items: center;
+            margin: 0 auto;
             
             
         }
@@ -27,9 +27,9 @@
 
             &-title {
                 color: var(--color-brown-dark, #502C00);
+                @include fluid-text(32, 24);
 
                 @include tablet {
-                    font-size: 24px;
                     font-weight: 700;
                 }
             }   
@@ -37,20 +37,23 @@
             &-description {
                 color: var(--color-brown-dark, #502C00);
                 @include font-inter-20-regular;
+                @include fluid-text(20, 14);
 
                 @include tablet {
-                    font-size: 14px;
                     font-weight: 500;
                 }
             }
         }
 
         &__icon {
-            flex: 0 0 auto;
-            @include tablet {
-                height: 80px;
-                width: 80px;
-            }
+            @include square(100px);
+            border-radius: 50%;
+            background-color: #E7F4F8;
+            // flex: 0 0 auto;
+            // @include tablet {
+            //     height: 80px;
+            //     width: 80px;
+            // }
         }
         
     }

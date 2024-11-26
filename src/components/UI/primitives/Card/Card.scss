@@ -1,9 +1,16 @@
 .card {
     @include flex-column(20);
-            flex: 0 0 auto;
-            border-radius: 30px;
-            background-color: var(--color-white);
-            padding: 30px 40px;
+    flex: 0 0 auto;
+    border-radius: 30px;
+    background-color: var(--color-white);
+    padding: 30px 40px;
+    min-width: 334px;
+            
+    @include tablet {
+        max-width: 452px;
+    }
+            
+          
 
     &-top {
         @include flex-column(10);

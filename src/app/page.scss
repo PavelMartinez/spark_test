@@ -1,50 +1,3 @@
-.home {
-    &__buttons {
-        @include flex-center;
-        gap: 20px;
-        margin-block: 50px;
-
-        @include font-inter-16-regular;
-
-        @include mobile {
-            @include flex-column(10);
-            @include font-inter-14-regular;
-
-        }
-
-        &-text {
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 10px;
-
-            padding-right: 64px;
-            
-
-            &--bold {
-                @include font-inter-24-semibold;
-                @include mobile {
-                    @include font-inter-16-semibold;
-                    font-weight: 700;
-                }
-            }
-        }
-
-        &-item {
-            @include flex-row;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-
-            border-radius: 20px;
-            background: var(--color-white, #ffffff);
-            color: var(--color-dark, #11133A);
-            
-
-            height: 80px;
-            padding: 8px 20px;
-        }
-    }
-}
 
 
 .reset-margin {
@@ -65,8 +18,4 @@
     height: 1371px;
     z-index: -10;
     
-}
-
-.position-relative{
-    position: relative;
 }
