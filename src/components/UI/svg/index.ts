@@ -12,6 +12,7 @@ export { default as ArrowRightUp } from './ArrowRightUp.svg'
 
 // Banner
 export { default as UploadSvg } from './UploadSvg.svg'
+export { default as UploadSvgS } from './UploadSvg-s.svg'
 export { default as TelegramSvg } from './TelegramSvg.svg'
 
 // Footer

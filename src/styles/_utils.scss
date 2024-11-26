@@ -32,6 +32,12 @@
   }
 }
 
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
 .visible-tablet {
   @include tablet-above {
     display: none !important;

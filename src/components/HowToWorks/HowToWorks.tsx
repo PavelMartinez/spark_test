@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import Button from '../UI/primitives/Button/Button'
 
-import { Clothes, UploadSvg } from '../../components/UI/svg'
+import { Clothes, UploadSvg, UploadSvgS } from '../../components/UI/svg'
 import Pikaco2 from '../../../public/Images/Pikaso2.png'
 
 import ImgHTWs1 from '../../../public/Icons/ImgHTWs1.png'
@@ -29,7 +29,13 @@ const HowToWorks = () => {
 						Choose a generation mode. and off you go!
 					</li>
 				</ol>
-				<Button variant='righticon' size='m' color='green' icon={<UploadSvg />} className='how-to-works__left-button'>
+				<Button
+					variant='righticon'
+					size='m'
+					color='green'
+					icon={<UploadSvg />}
+					className='how-to-works__left-button'
+				>
 					upLoad
 				</Button>
 			</div>
@@ -61,26 +67,36 @@ const HowToWorks = () => {
 					<Button
 						variant='righticon'
 						color='green'
-						icon={<UploadSvg  />}
-						className='how-to-works__right-button-top'
+						icon={<UploadSvg />}
+						className='hidden-tablet how-to-works__right-button-top'
+					>
+						Load
+					</Button>
+					<Button
+						variant='righticon'
+						color='green'
+						icon={<UploadSvgS />}
+						className='visible-tablet how-to-works__right-button-top'
 					>
 						Load
 					</Button>
 				</div>
-				<Button
-					variant='righticon'
-					size='m'
-					color='green'
-					icon={<Clothes />}
-					className='how-to-works__right-button-bottom'
-				>
-					Undress
-				</Button>
-				<Image
-					src={Pikaco2}
-					alt='Pikaco2'
-					className='how-to-works__right-img'
-				/>
+				<div className='how-to-works__right-bottom'>
+					<Button
+						variant='righticon'
+						size='m'
+						color='green'
+						icon={<Clothes />}
+						className='how-to-works__right-button-bottom'
+					>
+						Undress
+					</Button>
+					<Image
+						src={Pikaco2}
+						alt='Pikaco2'
+						className='how-to-works__right-img'
+					/>
+				</div>
 			</div>
 		</div>
 	)

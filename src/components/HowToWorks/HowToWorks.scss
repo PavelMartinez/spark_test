@@ -6,21 +6,24 @@
 
     padding: 23px 18.5px 17px 18.5px;
 
+
     @include mobile {
         @include flex-column(30);
-        padding-block: 30px;
+        padding-top: 30px;
         
     }
 
     &__left {
-        padding-top: 149px;
-        padding-left: 46px;
+        align-self: center;
+        margin-bottom: 107px;
+        margin-left: 46px;
 
         @include mobile {
-            padding: 0;
+            margin: 0;
         }
         &-title {
             color: var(--color-dark);
+            @include fluid-text(60, 28);
             margin-bottom: 20px;
         }
 
@@ -67,12 +70,18 @@
 
     &__right {
         @include flex-column(30, space-between);
-
-        
-       
+        height: 755px;
+        max-width: 502px;
+        width: 100%;
         background-color: var(--color-gray1);
         border-radius: var(--border-radius);
         position: relative;
+        align-self: center;
+
+        @include tablet {
+            height: 502px;
+            max-width: 334px
+        }
 
         @include mobile {
             gap: 11px;
@@ -81,26 +90,46 @@
         &-img {
             height: auto;
             border-radius: var(--border-radius);
+            position: absolute;
+            bottom: 0;
+
+            @include tablet {
+                height: 445px;
+            }
         }
 
         &-top {
             @include flex-row(30, space-between);
             align-items: center;
-            padding: 11px 8px 0 10px;
+            padding: 11px 18px 11px 18px;
 
             &-list {
                 @include flex-row(11);
+
             }
+
+            &-icon {
+                @include tablet {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+
+        &-bottom {
+            @include flex-column(5, space-between);
         }
 
         &-button {
             &-top {
                 height: 54px !important;
                 padding-inline: 24.5px !important;
+                
 
-                @include mobile {    
-                    height: 46px !important;
+                @include tablet {    
+                    height: 36px !important;
                     width: 85px !important;
+                    padding-inline: 10px !important;
 
                     .button__content {
                         font-size: 10.65px !important;
@@ -113,20 +142,10 @@
                 }
             }
             &-bottom {
-                position: absolute;
-                bottom: 31px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 424px;
-
-                @include tablet {
-                    width: 100%;
-                }
-
-                @include mobile {    
-                    width: 300px;
-                    bottom: 21px;
-                }
+                position: relative;
+                z-index: 3;
+                margin-inline: 39px;
+                margin-bottom: 31px;
                 
             }
         }
