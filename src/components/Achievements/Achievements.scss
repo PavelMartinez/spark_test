@@ -46,14 +46,76 @@
         }
 
         &__icon {
-            @include square(100px);
+            height: 100px;
+            width: 100px;
             border-radius: 50%;
             background-color: #E7F4F8;
-            // flex: 0 0 auto;
-            // @include tablet {
-            //     height: 80px;
-            //     width: 80px;
-            // }
+            flex: 0 0 auto;
+
+            position: relative;
+
+            @include tablet {
+                height: 80px;
+                width: 80px;
+            }
+
+            &--hearts-eyes {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: rotate(10deg);
+
+                @include tablet {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+
+            &--how-delicious {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                transform: rotate(-5deg);
+
+                @include tablet {
+                    height: 24px;
+                    width: 24px;
+                    top: 15px;
+                    left: 15px;
+                }
+            }
+
+            &--star-eyes{
+                position: absolute;
+                bottom: 8px;
+                left: 5px;
+                transform: rotate(-9deg);
+
+                @include tablet {
+                    height: 49px;
+                    width: 52px;
+                }
+            }
+
+            &--stars {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                @include tablet {
+                    height: 40px;
+                    width: 42px;
+                }
+            }
+
+            &--wand {
+                @include abs-center;
+
+                @include tablet {
+                    height: 59px;
+                    width: 59px;
+                }
+            }
         }
         
     }

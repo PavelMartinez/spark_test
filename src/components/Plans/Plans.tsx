@@ -1,5 +1,5 @@
 import { CloseSquare, Incognito, ShieldStar } from '../UI/svg'
-import EmojiRocket from '../../../public/Icons/EmojiRocket.png'
+import EmojiRocket from './assets/EmojiRocket.png'
 import Emoji1 from './assets/Emoji1.png'
 import EmojiFire from './assets/EmojiFire.png'
 import EmojiImp from './assets/EmojiImp.png'
