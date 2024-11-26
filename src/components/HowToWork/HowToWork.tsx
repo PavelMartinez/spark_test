@@ -39,7 +39,6 @@ const HowToWork = () => {
 						<Image src={CloudDownloadImg} alt='CloudDownloadImg'/>
 					</div>
 				</div>
-				{/* <Image src={HowToWorkImg} alt='Img' className='work__info-image' /> */}
 			</div>
 		)
 }
