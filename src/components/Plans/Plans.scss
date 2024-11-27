@@ -11,7 +11,12 @@
 .plans-top {
     @include flex-column(71);
 
+    @include mobile {
+        gap: 20px;
+    }
+
     &__title {
+        @include fluid-text(60, 28);
         color: var(--color-white);
         margin-inline: auto;
     }
@@ -20,9 +25,24 @@
         @include flex-row(20, space-between);
         position: relative;
 
+        &-item {
+            align-self: center;
+            &--popular {
+                @include abs-center;
+
+                @include mobile {
+                    position: relative;
+                    translate: none;
+                    left: 0;
+                    top: 0;
+                    
+
+                }
+            }
+        }
+
         @include mobile {
             flex-direction: column;
-            gap: 830px;
         }
         
     }

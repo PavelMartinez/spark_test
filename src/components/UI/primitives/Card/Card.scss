@@ -55,8 +55,8 @@
 
                 
                 &-title {
+                    @include fluid-text(18, 14);
                     color: var(--color-dark);
-                    font-size: 18px;
                     line-height: 120%;
                 }
 
@@ -68,14 +68,14 @@
                     }
 
                     &-old {
+                        @include fluid-text(14, 12);
                         opacity: 0.5;
                         line-height: 150%;
-                        font-size: 14px
                     }
 
                     &-new {
                         @include font-inter-32-bold;
-                        font-size: 28px;
+                        @include fluid-text(28, 24);
                         line-height: 100%;
                     }
 
@@ -164,7 +164,7 @@
                         color: var(--color-white);
                         gap: 10px;
                         &-title {
-                            font-size: 20px;
+                            @include fluid-text(20, 14);
                             color: var(--color-white);
                             font-weight: 600;
                         }
@@ -172,12 +172,12 @@
                         &-price {
                             margin-right: 33px;
                             &-new {
-                                font-size: 36px;
+                                @include fluid-text(36, 24);
                                 font-weight: 600;
                             }
 
                             &-old {
-                                font-size: 16px;
+                                 @include fluid-text(16, 12);
                             }
                         }
                     }

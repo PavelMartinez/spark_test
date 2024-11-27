@@ -12,13 +12,14 @@ import Image from 'next/image'
 import './Plans.scss'
 import Card from '../UI/primitives/Card/Card'
 
-const Plans = () => {
+const Plans = () => { 
     return (
 			<div className='plans'>
 				<div className='plans-top'>
 					<h1 className='plans-top__title'>Our Plans</h1>
 					<div className='plans-top__cards'>
 						<Card
+							className='plans-top__cards-item'
 							product={{
 								title: 'Basic',
 								coins: 8,
@@ -69,70 +70,73 @@ const Plans = () => {
 									height={40}
 								/>
 							}
+
 						/>
+						<div className='plans-top__cards-item plans-top__cards-item--popular'>
+							<Card
+								variant='popular'
+								product={{
+									title: 'Advanced',
+									coins: 15,
+									newPrice: '600 000',
+									oldPrice: '500 000',
+									achievements: [
+										'Excellent quality',
+										'No watermark',
+										'No queue',
+										'8 Requests',
+										'$0.8/image',
+									],
+									icons: [
+										<Image
+											src={EmojiStar}
+											alt='EmojiStar'
+											width={33}
+											height={33}
+											key={0}
+										/>,
+										<Image
+											src={EmojiPeach}
+											alt='EmojiPeach'
+											width={33}
+											height={33}
+											key={1}
+										/>,
+										<Image
+											src={EmojiLightning}
+											alt='EmojiLightning'
+											width={33}
+											height={33}
+											key={2}
+										/>,
+										<Image
+											src={EmojiImp}
+											alt='EmojiImp'
+											width={33}
+											height={33}
+											key={3}
+										/>,
+										<Image
+											src={EmojiOk}
+											alt='EmojiOk'
+											width={33}
+											height={33}
+											key={4}
+										/>,
+									],
+								}}
+								iconMain={
+									<Image
+										src={EmojiRocket}
+										alt='EmojiRocket'
+										width={60}
+										height={60}
+									/>
+								}
+							/>
+						</div>
 						<Card
-							variant='popular'
-							product={{
-								title: 'Advanced',
-								coins: 15,
-								newPrice: '600 000',
-								oldPrice: '500 000',
-								achievements: [
-									'Excellent quality',
-									'No watermark',
-									'No queue',
-									'8 Requests',
-									'$0.8/image',
-								],
-								icons: [
-									<Image
-										src={EmojiStar}
-										alt='EmojiStar'
-										width={33}
-										height={33}
-										key={0}
-									/>,
-									<Image
-										src={EmojiPeach}
-										alt='EmojiPeach'
-										width={33}
-										height={33}
-										key={1}
-									/>,
-									<Image
-										src={EmojiLightning}
-										alt='EmojiLightning'
-										width={33}
-										height={33}
-										key={2}
-									/>,
-									<Image
-										src={EmojiImp}
-										alt='EmojiImp'
-										width={33}
-										height={33}
-										key={3}
-									/>,
-									<Image
-										src={EmojiOk}
-										alt='EmojiOk'
-										width={33}
-										height={33}
-										key={4}
-									/>,
-								],
-							}}
-							iconMain={
-								<Image
-									src={EmojiRocket}
-									alt='EmojiRocket'
-									width={60}
-									height={60}
-								/>
-							}
-							className='absolute-center'
-						/>
-						<Card
+							className='plans-top__cards-item'
 							product={{
 								title: 'Pro',
 								coins: 30,
@@ -190,7 +194,6 @@ const Plans = () => {
 					</div>
 				</div>
 				<div className='plans-bottom'>
-					
 					<div className='plans-bottom__item'>
 						<div className='plans-bottom__item-icon'>
 							<ShieldStar />

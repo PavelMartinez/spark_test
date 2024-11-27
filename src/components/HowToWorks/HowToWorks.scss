@@ -92,9 +92,10 @@
             border-radius: var(--border-radius);
             position: absolute;
             bottom: 0;
+            object-fit: cover; 
 
             @include tablet {
-                height: 445px;
+                
             }
         }
 
