@@ -33,18 +33,28 @@
     }
 
     &__left {
-        @include flex-center;
-        gap: 30px;
+        @include flex-row(10, space-between);
+        align-items: center;
+
+        max-width: 902px;
+        width: 100%;
 
         @include tablet {
             @include visually-hidden;
         }
+
+        &-button {
+            @include desktop {
+                display: none !important;
+            }
+        }
     }
 
     &__right {
-        display: inline-flex;
+        @include flex-row(5, space-between);
         align-items: center;
-        gap: 20px;
+        max-width: 462px;
+        width: 100%;
 
         @include tablet {
             @include visually-hidden;

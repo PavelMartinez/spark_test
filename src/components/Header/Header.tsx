@@ -27,6 +27,7 @@ function Header() {
 						<Logo />
 					</div>
 					<Button
+						className='header__left-button'
 						variant='lefticon'
 						size='s'
 						color='blue'
@@ -34,7 +35,7 @@ function Header() {
 					>
 						GENERATE
 					</Button>
-					<Navbar className='hidden-desktop' />
+					<Navbar />
 				</div>
 				<div className='header__right'>
 					<LanguageSelector
