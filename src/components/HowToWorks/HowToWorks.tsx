@@ -13,9 +13,9 @@ import ImgHTWs3 from '../../../public/Icons/ImgHTWs3.png'
 
 
 
-const HowToWorks = () => {
+const HowToWorks = ({className = ''}) => {
 	return (
-		<div className='how-to-works'>
+		<div className={`how-to-works ${className || ''}`}>
 			<div className='how-to-works__left'>
 				<h1 className='how-to-works__left-title'>How it works</h1>
 				<ol className='how-to-works__left-list'>

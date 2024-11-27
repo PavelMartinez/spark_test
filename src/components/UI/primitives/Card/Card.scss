@@ -5,15 +5,23 @@
     background-color: var(--color-white);
     padding: 30px 40px;
     min-width: 334px;
+    position: relative;
             
     @include tablet {
         max-width: 452px;
+        padding: 35px 30px;
+        gap: 15px;
     }
             
           
 
     &-top {
         @include flex-column(10);
+
+        @include tablet {
+            gap: 0;
+        }
+        
 
         &__top {
             @include flex-row(10, space-between);
@@ -33,6 +41,18 @@
                 border-radius: var(--border-radius);
                 border: 1px solid #42424226;
                 padding: 4px 10px;
+
+                @include tablet {
+                    position: absolute;
+                    right: 30px;
+                    top: 20px;
+                    padding: 1px 10px;
+
+                    & img {
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
             }
         }
 
@@ -44,6 +64,15 @@
                 @include square(80px);
                 background-color: var(--color-gray2);
                 border-radius: var(--border-radius);
+
+                @include tablet {
+                    @include square(62px);
+                    border-radius: 10.4px;
+                    & img {
+                        width: 37px;
+                        height: 37px;
+                    }
+                }
             }
 
             &-text {
@@ -51,6 +80,10 @@
                 color: var(--color-dark);
                 font-weight: 600;
                 line-height: 100%;
+
+                @include tablet {
+                    gap: 4px;
+                }
                 
 
                 
@@ -65,6 +98,9 @@
 
                     &-left {
                         @include flex-column(4);
+                        @include mobile {
+                            gap: 0;
+                        }
                     }
 
                     &-old {
@@ -81,6 +117,7 @@
 
                     &-name {
                         @include flex-row(10);
+                        @include fluid-text(16, 14);
                     }
                 }
                 
@@ -92,8 +129,15 @@
         @include flex-column(20);
         border-top: 1px solid var(--color-gray5);
 
+        @include tablet {
+            gap: 15px;
+        }
+
         &__top {
             padding-top: 20px;
+            @include tablet {
+                padding-top: 15px;
+            }
 
             &-item {
                 @include flex-row(13);
@@ -114,6 +158,15 @@
                     &--active {
                         background-color: #FCFCFC;
                     }
+
+                    @include tablet {
+                        @include square(44px);
+
+                        & img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
                 }
 
                 &-text {
@@ -133,11 +186,13 @@
 
     &--variant {
         &-popular {
-
-            
             background: linear-gradient(135deg, #9FCCFA, #49C4CC);
             gap: 11px !important;
             padding-inline: 30px !important;
+
+            @include tablet {
+                gap: 15px !important;
+            }
             .card-top{
                 &__top {
                     &-popular {
@@ -158,11 +213,18 @@
                     &-icon {
                         @include square(100px);
                         background-color: var(--color-white);
+                        @include tablet {
+                            @include square(62px);
+                        }
                     }
 
                     &-text {
                         color: var(--color-white);
                         gap: 10px;
+
+                        @include tablet {
+                            gap: 4px;
+                        }
                         &-title {
                             @include fluid-text(20, 14);
                             color: var(--color-white);
@@ -187,8 +249,17 @@
             .card-bottom {
                 border-top: 1px solid var(--color-white);
                 gap: 30px;
+
+                @include tablet {
+                    gap: 15px;
+                }
+
                 &__top {
                     padding-top: 25px;
+
+                    @include tablet {
+                        padding-top: 15px;
+                    }
 
                     &-item {
                         background-color: #FFFFFF26;

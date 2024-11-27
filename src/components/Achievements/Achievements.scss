@@ -2,6 +2,10 @@
     
     margin-block: 50px;
 
+    @include tablet {
+        margin-block: 5px;
+    }
+
     &-list {
         @include flex-row(5);
 

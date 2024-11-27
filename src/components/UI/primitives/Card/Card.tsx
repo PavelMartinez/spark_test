@@ -33,7 +33,11 @@ const Card: React.FC<CardProps> = ({
 		achievements = [],
 	} = product
 	return (
-		<div className={`${props.className ? props.className : ''} ${variant === 'popular' ? 'card-container' : ''}`}>
+		<div
+			className={`${props.className ? props.className : ''} ${
+				variant === 'popular' ? 'card-container' : ''
+			}`}
+		>
 			<div {...props} className={`card card--variant-${variant}`}>
 				<div className='card-top'>
 					<div className='card-top__top'>
@@ -42,7 +46,7 @@ const Card: React.FC<CardProps> = ({
 								<p className='card-top__top-popular-text'>MOST POPULAR</p>
 							</div>
 						)}
-						<div className='card-top__top-sale'>
+						<div className='card-top__top-sale hidden-tablet'>
 							<p className='card-top__top-sale-text'>Sale -50%</p>
 						</div>
 						<div className='card-top__top-coins'>

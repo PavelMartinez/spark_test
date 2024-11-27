@@ -12,9 +12,9 @@ import Image from 'next/image'
 import './Plans.scss'
 import Card from '../UI/primitives/Card/Card'
 
-const Plans = () => { 
+const Plans = ({className = ''}) => { 
     return (
-			<div className='plans'>
+			<div className={`plans ${className || ''}`}>
 				<div className='plans-top'>
 					<h1 className='plans-top__title'>Our Plans</h1>
 					<div className='plans-top__cards'>
@@ -70,7 +70,6 @@ const Plans = () => {
 									height={40}
 								/>
 							}
-
 						/>
 						<div className='plans-top__cards-item plans-top__cards-item--popular'>
 							<Card

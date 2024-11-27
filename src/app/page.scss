@@ -1,4 +1,66 @@
+.home {
 
+    &__price {
+        position: relative;
+        &-background {
+            position: absolute;
+            left: 50%;
+            translate: -50% ;
+            bottom: 0;
+            width: 90vw;
+            height: 69%;
+            border-radius: 30px;
+            background: linear-gradient(to top, #11133A, #76E2F8);
+            
+
+            z-index: -1;
+            @media (max-width: 1640px) {
+                width: 95vw;
+            }
+            @media (max-width: 1500px) {
+                width: 100vw;
+            }
+
+            @include tablet {
+                height: 82%;
+            }
+
+
+            @include mobile {
+                height: 77%;
+                border-radius: 20px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                background: url(../../public/PlansVector1.png) no-repeat;
+                background-position: bottom right;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                
+                @include mobile {
+                    display: none;
+                }            
+            }
+            
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: url(../../public/PlansVector2.png) no-repeat;
+                background-position: top left;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+
+                @include mobile {
+                    display: none;
+                }            
+            }
+        }
+    }        
+}
 
 .reset-margin {
     @include mobile {

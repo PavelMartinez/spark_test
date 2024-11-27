@@ -1,6 +1,5 @@
 import './page.scss'
 import React from 'react'
-// import AnimationBg from '../../public/AnimationBg.png'
 import Banner from '@/components/Banner/Banner'
 import HowToWork from '@/components/HowToWork/HowToWork'
 import Achievements from '@/components/Achievements/Achievements'
@@ -23,14 +22,10 @@ export default function Home() {
 				<HowToWork />
 			</div>
 			<Achievements />
-			<div className='reset-margin'>
-				<HowToWorks />
-			</div>
-			<div className='reset-margin position-relative'>
-				<Plans />
-				{/* <div className='background-animation'>
-					<Image src={AnimationBg} alt='AnimationBg' />
-				</div> */}
+			<div className='home__price'>
+				<HowToWorks className='reset-margin' />
+				<Plans className='home__price-plans' />
+				<div className='home__price-background'></div>
 			</div>
 			<div className='reset-margin'>
 				<Slider />

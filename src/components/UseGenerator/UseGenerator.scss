@@ -5,6 +5,10 @@
     position: relative;
     margin-block: 50px;
 
+    @include tablet {
+        margin-block: 5px;
+    }
+
 
     
     &__inner {
