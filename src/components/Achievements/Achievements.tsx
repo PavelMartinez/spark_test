@@ -7,8 +7,11 @@ import MagicWandIcon from './assets/MagicWandIcon.png'
 import StarEyesEmoji from './assets/StarEyesEmoji.png'
 import StarsEmoji from './assets/StarsEmoji.png'
 
+import SectionBanner from '../../shared/data/SectionBanner'
+
 
 const Achievements = () => {
+	const {achievement1, achievement2, achievement3} = SectionBanner.achievements
     return (
 			<div className='achievements'>
 				<ul className='achievements-list'>
@@ -27,9 +30,11 @@ const Achievements = () => {
 								/>
 							</div>
 							<div className='achievements-item__text'>
-								<h3 className='achievements-item__text-title'>100 000+</h3>
+								<h3 className='achievements-item__text-title'>
+									{achievement1.title}
+								</h3>
 								<p className='achievements-item__text-description'>
-									Users every day
+									{achievement1.description}
 								</p>
 							</div>
 						</div>
@@ -49,9 +54,11 @@ const Achievements = () => {
 								/>
 							</div>
 							<div className='achievements-item__text'>
-								<h3 className='achievements-item__text-title'>User-friendly</h3>
+								<h3 className='achievements-item__text-title'>
+									{achievement2.title}
+								</h3>
 								<p className='achievements-item__text-description'>
-									And intuitive interface
+									{achievement2.description}
 								</p>
 							</div>
 						</div>
@@ -66,9 +73,11 @@ const Achievements = () => {
 								/>
 							</div>
 							<div className='achievements-item__text'>
-								<h3 className='achievements-item__text-title'>Realistic</h3>
+								<h3 className='achievements-item__text-title'>
+									{achievement3.title}
+								</h3>
 								<p className='achievements-item__text-description'>
-									Realistic image processing
+									{achievement3.description}
 								</p>
 							</div>
 						</div>

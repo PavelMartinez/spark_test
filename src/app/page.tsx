@@ -14,26 +14,22 @@ import Loading from '@/components/Loading/Loading'
 export default function Home() {
   return (
 		<main className='home container'>
-			<div className='reset-margin'>
-				<Banner />
-			</div>
-			<Loading />
-			<div className='reset-margin'>
-				<HowToWork />
-			</div>
-			<Achievements />
-			<div className='home__price'>
+			<section className='home__banner'>
+				<Banner className='reset-margin' />
+				<Loading />
+				<HowToWork className='reset-margin' />
+				<Achievements />
+			</section>
+			<section className='home__price reset-margin'>
 				<HowToWorks className='reset-margin' />
 				<Plans className='home__price-plans' />
 				<div className='home__price-background'></div>
-			</div>
-			<div className='reset-margin'>
-				<Slider />
-			</div>
-			<FrequentlyAskedQuestions />
-			<div className='reset-margin'>
-				<UseGenerator />
-			</div>
+			</section>
+			<section className='home__slider'>
+				<Slider className='reset-margin' />
+				<FrequentlyAskedQuestions />
+				<UseGenerator className='reset-margin' />
+			</section>
 		</main>
 	)
 }

@@ -18,7 +18,7 @@ import 'swiper/css/scrollbar'
 
 import './Slider.scss'
 
-const Slider = () => {
+const Slider = ({className = ''}) => {
 	// Временная функция map()* для теста карточек
 	const renderSlides = (count: number) => {
 		return Array.from({ length: count }, (_, index) => (
@@ -30,7 +30,7 @@ const Slider = () => {
 	}
 
 	return (
-		<div className='slider'>
+		<div className={`slider ${className || ''}`}>
 			<div className='slider-top'>
 				<div className='slider-top__left'>
 					<div className='slider-top__text'>

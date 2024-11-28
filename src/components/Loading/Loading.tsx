@@ -4,9 +4,12 @@ import Link from 'next/link'
 import AppleIconImage from '../../../public/Icons/AppleIconImage.png'
 import AndroidIconImage from '../../../public/Icons/AndroidIconImage.png'
 
+import SectionBanner from '../../shared/data/SectionBanner'
+
 const Loading = () => {
+	const {androd, ios} = SectionBanner.loading
     return (
-        <div className='home__buttons'>
+			<div className='home__buttons'>
 				<Link href='/instructions/ios' className='home__buttons-item'>
 					<Image
 						src={AppleIconImage}
@@ -16,8 +19,8 @@ const Loading = () => {
 						height={64}
 					/>
 					<div className='home__buttons-text'>
-						DOWNLOAD THE APP ON
-						<div className='home__buttons-text--bold'>IOS</div>
+						{ios.title}
+						<div className='home__buttons-text--bold'>{ios.name}</div>
 					</div>
 				</Link>
 				<Link href='/instructions/android' className='home__buttons-item'>
@@ -29,12 +32,12 @@ const Loading = () => {
 						height={64}
 					/>
 					<div className='home__buttons-text'>
-						DOWNLOAD THE APP ON
-						<div className='home__buttons-text--bold'>Android</div>
+						{androd.title}
+						<div className='home__buttons-text--bold'>{androd.name}</div>
 					</div>
-			</Link>
-		</div>
-    )
+				</Link>
+			</div>
+		)
 }
 
 export default Loading

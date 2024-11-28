@@ -25,7 +25,7 @@ export { default as XIcon } from './XIcon.svg'
 export { default as LogoFooterMob } from './LogoFooterMob.svg'
 
 // Button
-export { default as ButtonSvg } from './ButtonSvg.svg'
+
 export { default as Login } from './Login.svg'
 export { default as MagicStickSvg } from './MagicStickSvg.svg'
 export { default as Clothes } from './Clothes.svg'

@@ -5,9 +5,9 @@ import Upload from "./assets/Upload.png"
 import Button from "../UI/primitives/Button/Button"
 import { UploadSvg } from "../UI/svg"
 
-const UseGenerator = () => {
+const UseGenerator = ({ className = ''}) => {
     return ( 
-			<div className='generator'>
+			<div className={`generator ${className || ''}`}>
 				<div className='generator__inner'>
 					<div className='generator__inner-text'>
 						<h1 className='generator__inner-title'>Use nude generator</h1>
