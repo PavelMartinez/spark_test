@@ -21,7 +21,7 @@ export default function Home() {
 				<Achievements />
 			</section>
 			<section className='home__price reset-margin'>
-				<HowToWorks className='reset-margin' />
+				<HowToWorks />
 				<Plans className='home__price-plans' />
 				<div className='home__price-background'></div>
 			</section>

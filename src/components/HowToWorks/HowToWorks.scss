@@ -1,6 +1,6 @@
 .how-to-works {
     @include flex-row(30, space-between);
-    position: relative;
+    
     
     background-color: var(--color-white);
     border-radius: var(--border-radius);
