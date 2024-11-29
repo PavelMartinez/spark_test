@@ -1,4 +1,14 @@
 .banner {
+    margin-top: 128px;
+    
+    @include tablet {
+        margin-top: 90px;
+    }
+
+    @include mobile {
+        margin-top: 70px;
+    }
+    
     &__inner {
         @include flex-row(4, space-between);
         padding-top: 5px;

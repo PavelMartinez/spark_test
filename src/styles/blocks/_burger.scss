@@ -1,60 +1,68 @@
 /*CSS*/
 .burger {
-    @include reset-button;
+    
     width: 40px;
     height: 40px;
-    border-radius: 150px;
+    border-radius: 50%;
+    background-color: var(--color-gray1);
+    position: relative;
+    display: block;
+    
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap: 3px;
-    // width: 40px;
-    // height: 40px;
-    // border-radius: 150px;
-    // padding: 16px;
-
-    background: var(--color-gray1);
-
-    transition: all .3s ease-in-out;
-
-    &__line {
+    &::after, &::before, span{
+        position: absolute;
+        background-color: var(--color-dark);
         width: 11px;
         height: 1px;
-        background: #000;
+        left: 15px;
+        border-radius: 1px;
+        transition: 0.2s;
+    }
+
+    &::after { 
+        content: '';
+        top: 16px;
+    }
+
+    &::before { 
+        content: '';
+        bottom: 15px;
+    }
+
+    span {
+        top: 20px;
        
-        transition: all .3s ease-in-out;
     }
 
-    /*Animate lines*/
-    &--open {
-        background: #000;
 
-        @include mobile {
-            border: 0.667px solid #5E5E5E;
-            background: linear-gradient(152deg, #111 14.89%, #213221 84.78%);
-        }
+    
+    // /*Animate lines*/
+    // &--open {
+    //     background: #000;
 
-        .burger__line {
-            margin: 0 !important;
-            background: rgba(255, 255, 255, 1);
+    //     @include mobile {
+    //         border: 0.667px solid #5E5E5E;
+    //         background: linear-gradient(152deg, #111 14.89%, #213221 84.78%);
+    //     }
 
-            @include mobile {
-                background: rgba(181, 252, 69, 1);
-            }
-        }
-        .burger__line:nth-child(2) {
-            opacity: 0;
-        }
+    //     .burger__line {
+    //         margin: 0 !important;
+    //         background: rgba(255, 255, 255, 1);
 
-        .burger__line:nth-child(1) {
-            transform: translateY(3px) rotate(45deg);
-        }
+    //         @include mobile {
+    //             background: rgba(181, 252, 69, 1);
+    //         }
+    //     }
+    //     .burger__line:nth-child(2) {
+    //         opacity: 0;
+    //     }
 
-        .burger__line:nth-child(3) {
-            transform: translateY(-3px) rotate(-45deg);
-        }
-    }
+    //     .burger__line:nth-child(1) {
+    //         transform: translateY(3px) rotate(45deg);
+    //     }
+
+    //     .burger__line:nth-child(3) {
+    //         transform: translateY(-3px) rotate(-45deg);
+    //     }
+    // }
 }

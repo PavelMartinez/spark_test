@@ -6,20 +6,31 @@
     height: 128px;
 
     border-radius: 0 0 20px 20px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    top: 0;
+
+    transition: "top 0.3s ease-in-out";
+
+    @include tablet {
+        height: 90px;
+       
+    }
     
 
     @include mobile {
         height: 70px;
-    }
+        border-radius: 0 0 10px 10px;
 
-    @include tablet {
-        height: 90px;
     }
 
     &__mobile {
         @include flex-row(10, space-between);
         width: 100%;
         align-items: center;
+        
+        
 
         @include tablet-above {
             display: none;

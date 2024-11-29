@@ -1,15 +1,52 @@
-import React from 'react'
-import { Logo, LogoHeaderMob, FlagSvgRu, AltArrowDown, ButtonMobSvg, MagicStickSvg } from '../UI/svg'
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import {
+	Logo,
+	LogoHeaderMob,
+	FlagSvgRu,
+	AltArrowDown,
+	ButtonMobSvg,
+	MagicStickSvg,
+} from '../UI/svg'
 import Button from '../UI/primitives/Button/Button'
 import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
 import { Generation } from '../UI/primitives/Generation/Generation'
 import BurgerButton from '../UI/primitives/BurgerButton/BurgerButton'
- 
- 
-function Header() {
-  return (
-		<header className='header'>
+
+const Header: React.FC = () => {
+	const [showHeader, setShowHeader] = useState(true)
+	const [lastScrollY, setLastScrollY] = useState(0)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY
+
+			if (currentScrollY > lastScrollY && currentScrollY > 100) {
+				setShowHeader(false) // Скрыть при прокрутке вниз
+			} else {
+				setShowHeader(true) // Показать при прокрутке вверх
+			}
+
+			setLastScrollY(currentScrollY)
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [lastScrollY])
+
+	return (
+		<header
+			style={{
+				top: showHeader ? 0 : '-128px',
+				transition: 'top 0.3s ease-in-out',
+			}}
+			className='header'
+		>
 			<div className='header__inner container'>
 				<div className='header__mobile'>
 					<div className='header__logo logo'>
@@ -19,7 +56,7 @@ function Header() {
 						<button className='header__buttons-item'>
 							<ButtonMobSvg />
 						</button>
-						<BurgerButton variant='default' />
+						<BurgerButton />
 					</div>
 				</div>
 				<div className='header__left'>
@@ -44,7 +81,7 @@ function Header() {
 					>
 						RU
 					</LanguageSelector>
-					<Generation leftIcon={<FlagSvgRu />} rightIcon={<FlagSvgRu />} />
+					<Generation />
 					<Button
 						variant='lefticon'
 						size='s'
