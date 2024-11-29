@@ -51,6 +51,10 @@
                     margin-top: 15px;
                     order: 1;
                 }
+
+                @include mobile {
+                    order: 0;
+                }
             }
         }
 
