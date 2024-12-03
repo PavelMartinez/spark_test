@@ -12,65 +12,71 @@ import Image from 'next/image'
 import './Plans.scss'
 import Card from '../UI/primitives/Card/Card'
 
+import PlansProps from '../../shared/data/Plans'
+
 const Plans = ({className = ''}) => { 
     return (
 			<div className={`plans ${className || ''}`}>
 				<div className='plans-top'>
 					<h1 className='plans-top__title'>Our Plans</h1>
 					<div className='plans-top__cards'>
-						<Card
-							className='plans-top__cards-item'
-							product={{
-								title: 'Basic',
-								coins: 8,
-								newPrice: '600 000',
-								oldPrice: '500 000',
-								achievements: [
-									'Medium quality',
-									'No queue',
-									'4 Requests',
-									'$1 / image',
-								],
-								icons: [
+						<div className={`plans-top__cards-item plans-top__cards-item--${PlansProps[0].variant}`}>
+							<Card
+								variant={PlansProps[0].variant}
+								
+								product={{
+									title: 'Basic',
+									coins: 8,
+									newPrice: '600 000',
+									oldPrice: '500 000',
+									achievements: [
+										'Medium quality',
+										'No queue',
+										'4 Requests',
+										'$1 / image',
+									],
+									icons: [
+										<Image
+											src={Emoji1}
+											alt='Emoji1'
+											width={33}
+											height={33}
+											key={0}
+										/>,
+										<Image
+											src={EmojiLightning}
+											alt='EmojiLightning'
+											width={33}
+											height={33}
+											key={1}
+										/>,
+										<Image
+											src={EmojiImp}
+											alt='EmojiImp'
+											width={33}
+											height={33}
+											key={2}
+										/>,
+										<Image
+											src={EmojiOk}
+											alt='EmojiOk'
+											width={33}
+											height={33}
+											key={3}
+										/>,
+									],
+								}}
+								iconMain={
 									<Image
-										src={Emoji1}
-										alt='Emoji1'
+										src={EmojiThumbsUp}
+										alt='EmojiThumbsUp'
 										width={33}
 										height={33}
 										key={0}
-									/>,
-									<Image
-										src={EmojiLightning}
-										alt='EmojiLightning'
-										width={33}
-										height={33}
-										key={1}
-									/>,
-									<Image
-										src={EmojiImp}
-										alt='EmojiImp'
-										width={33}
-										height={33}
-										key={2}
-									/>,
-									<Image
-										src={EmojiOk}
-										alt='EmojiOk'
-										width={33}
-										height={33}
-										key={3}
-									/>,
-								],
-							}}
-							iconMain={
-								<Image
-									src={EmojiThumbsUp}
-									alt='EmojiThumbsUp'
-									width={37.3}
-									height={40}
-								/>
-							}
-						/>
+									/>
+								}
+							/>
+						</div>
 						<div className='plans-top__cards-item plans-top__cards-item--popular'>
 							<Card
 								variant='popular'
@@ -134,62 +140,69 @@ const Plans = ({className = ''}) => {
 								}
 							/>
 						</div>
-						<Card
-							className='plans-top__cards-item'
-							product={{
-								title: 'Pro',
-								coins: 30,
-								newPrice: '600 000',
-								oldPrice: '500 000',
-								achievements: [
-									'Excellent quality',
-									'No watermark',
-									'No queue',
-									'16 Requests',
-									'$0.53/image',
-								],
-								icons: [
+						<div className='plans-top__cards-item plans-top__cards-item--default'>
+							<Card
+								variant='default'
+								product={{
+									title: 'Pro',
+									coins: 30,
+									newPrice: '600 000',
+									oldPrice: '500 000',
+									achievements: [
+										'Excellent quality',
+										'No watermark',
+										'No queue',
+										'16 Requests',
+										'$0.53/image',
+									],
+									icons: [
+										<Image
+											src={EmojiStar}
+											alt='EmojiStar'
+											width={33}
+											height={33}
+											key={0}
+										/>,
+										<Image
+											src={EmojiPeach}
+											alt='EmojiPeach'
+											width={33}
+											height={33}
+											key={1}
+										/>,
+										<Image
+											src={EmojiLightning}
+											alt='EmojiLightning'
+											width={33}
+											height={33}
+											key={2}
+										/>,
+										<Image
+											src={EmojiImp}
+											alt='EmojiImp'
+											width={33}
+											height={33}
+											key={3}
+										/>,
+										<Image
+											src={EmojiOk}
+											alt='EmojiOk'
+											width={33}
+											height={33}
+											key={4}
+										/>,
+									],
+								}}
+								iconMain={
 									<Image
-										src={EmojiStar}
-										alt='EmojiStar'
-										width={33}
-										height={33}
-										key={0}
-									/>,
-									<Image
-										src={EmojiPeach}
-										alt='EmojiPeach'
-										width={33}
-										height={33}
-										key={1}
-									/>,
-									<Image
-										src={EmojiLightning}
-										alt='EmojiLightning'
-										width={33}
-										height={33}
-										key={2}
-									/>,
-									<Image
-										src={EmojiImp}
-										alt='EmojiImp'
-										width={33}
-										height={33}
-										key={3}
-									/>,
-									<Image
-										src={EmojiOk}
-										alt='EmojiOk'
-										width={33}
-										height={33}
-										key={4}
-									/>,
-								],
-							}}
-							iconMain={
-								<Image src={EmojiFire} alt='EmojiFire' width={40} height={40} />
-							}
-						/>
+										src={EmojiFire}
+										alt='EmojiFire'
+										width={40}
+										height={40}
+									/>
+								}
+							/>
+						</div>
 					</div>
 				</div>
 				<div className='plans-bottom'>
