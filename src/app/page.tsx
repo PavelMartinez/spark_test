@@ -9,6 +9,7 @@ import Slider from '@/components/Slider/Slider'
 import HowToWorks from '@/components/HowToWorks/HowToWorks'
 import Plans from '@/components/Plans/Plans'
 import Loading from '@/components/Loading/Loading'
+import Advertising from '@/components/Advertising/Advertising'
 
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
 				<Loading />
 				<HowToWork className='reset-margin' />
 				<Achievements />
+			</section>
+			<section className='home__advertising hidden-tablet'>
+				<Advertising/>
 			</section>
 			<section className='home__price reset-margin'>
 				<HowToWorks />

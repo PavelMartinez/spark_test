@@ -35,3 +35,6 @@ export { default as Incognito } from './Incognito.svg'
 export { default as CloseSquare } from './CloseSquare.svg'
 export { default as ShieldStar } from './ShieldStar.svg'
 
+// Advertising
+export { default as AdvertisingVector } from './AdvertisingVector.svg'
+
