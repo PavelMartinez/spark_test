@@ -3,7 +3,7 @@
 
 export {default as Logo} from './Logo.svg'
 export {default as AltArrowDown} from './Alt Arrow Down.svg'
-export {default as FlagSvgRu} from './Flag-ru.svg'
+export {default as FlagSvgRu} from './FlagSvgRu.svg'
 export {default as LogoHeaderMob} from './LogoHeaderMob.svg'
 export {default as ButtonMobSvg} from './ButtonMobSvg.svg'
 export { default as WhiteButtonSvg } from './WhiteButtonSvg.svg'

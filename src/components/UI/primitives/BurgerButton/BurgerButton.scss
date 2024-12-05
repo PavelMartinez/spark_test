@@ -73,9 +73,14 @@ input {
 }
 
 #burger-toggle:checked ~ .overlay {
-    top: 70px;
+    top: 60px;
     transition: 0.3s;
     opacity: 1;
     
 
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  width: 100%;
 }

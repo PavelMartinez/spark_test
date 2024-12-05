@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react'
 import {
 	Logo,
 	LogoHeaderMob,
-	FlagSvgRu,
-	AltArrowDown,
 	ButtonMobSvg,
 	MagicStickSvg,
 } from '../UI/svg'
@@ -24,9 +22,9 @@ const Header: React.FC = () => {
 			const currentScrollY = window.scrollY
 
 			if (currentScrollY > lastScrollY && currentScrollY > 100) {
-				setShowHeader(false) // Скрыть при прокрутке вниз
+				setShowHeader(false) 
 			} else {
-				setShowHeader(true) // Показать при прокрутке вверх
+				setShowHeader(true) 
 			}
 
 			setLastScrollY(currentScrollY)
@@ -75,10 +73,7 @@ const Header: React.FC = () => {
 					<Navbar />
 				</div>
 				<div className='header__right'>
-					<LanguageSelector
-						leftIcon={<FlagSvgRu width='40' height='40' />}
-						rightIcon={<AltArrowDown />}
-					>
+					<LanguageSelector>
 						RU
 					</LanguageSelector>
 					<Generation />

@@ -30,31 +30,6 @@ const nextConfig = {
 
 		return config
 	},
-
-	// webpack(config) {
-	// 	// Находим стандартную загрузку изображений и исключаем из неё SVG
-	// 	config.module.rules.push({
-	// 		test: /\.svg$/,
-	// 		use: [
-	// 			{
-	// 				loader: '@svgr/webpack',
-	// 				options: {
-	// 					// Настраиваем возможности svgr, например, убираем префикс "svg" для атрибутов
-	// 					svgoConfig: {
-	// 						plugins: [
-	// 							{
-	// 								name: 'removeViewBox',
-	// 								active: false,
-	// 							},
-	// 						],
-	// 					},
-	// 				},
-	// 			},
-	// 		],
-	// 	})
-
-	// 	return config
-	// },
 }
 
 module.exports = nextConfig
