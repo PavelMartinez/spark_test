@@ -3,12 +3,34 @@
     margin: auto;
     background-color: #fff;
 
+    height: 128px;
+
     border-radius: 0 0 20px 20px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    top: 0;
+
+    transition: "top 0.3s ease-in-out";
+
+    @include tablet {
+        height: 90px;
+       
+    }
+    
+
+    @include mobile {
+        height: 70px;
+        border-radius: 0 0 10px 10px;
+
+    }
 
     &__mobile {
         @include flex-row(10, space-between);
         width: 100%;
         align-items: center;
+        
+        
 
         @include tablet-above {
             display: none;
@@ -16,24 +38,34 @@
     }
     
     &__inner {
-        @include flex-row(56, space-between);
-        padding-block: 34px;
+        @include flex-row(15, space-between);
+        
         width: 100%;
     }
 
     &__left {
-        @include flex-center;
-        gap: 30px;
+        @include flex-row(10, space-between);
+        align-items: center;
+
+        max-width: 902px;
+        width: 100%;
 
         @include tablet {
             @include visually-hidden;
         }
+
+        &-button {
+            @include desktop {
+                display: none !important;
+            }
+        }
     }
 
     &__right {
-        display: inline-flex;
+        @include flex-row(5, space-between);
         align-items: center;
-        gap: 20px;
+        max-width: 462px;
+        width: 100%;
 
         @include tablet {
             @include visually-hidden;
@@ -59,5 +91,21 @@
 
     &__logo {
         @include flex-center;
+    }
+
+
+    &__buttons {
+
+        @include flex-row(5);
+
+        &-item {
+            @include reset-button;
+            @include flex-center;
+            cursor: pointer;
+            border-radius: 50px;
+            background: var(--color-green);
+            width: 40px;
+            height: 40px;
+        }
     }
 }

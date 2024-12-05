@@ -21,7 +21,13 @@
 
     &__icon {
         @include flex-center;
-        
         flex: 0 0 auto;
+
+        &--flag {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-gray1);
+        }
     }
 }

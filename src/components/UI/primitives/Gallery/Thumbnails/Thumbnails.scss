@@ -1,0 +1,25 @@
+.thumbnails {
+    @include flex-row(10);
+}
+
+.thumbnail {
+    border: 2px solid transparent; 
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    @include tablet {
+        width: 35px;
+        height: 35px;
+        border-radius: 6.73px;
+    }
+    &:hover {
+        cursor: pointer;
+        border: 2px solid #EEB46E; 
+        opacity: 0.8;
+    }
+
+
+}
+.active {
+    border: 2px solid #EEB46E; 
+}

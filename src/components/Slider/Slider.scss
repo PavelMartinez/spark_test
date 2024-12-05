@@ -1,0 +1,170 @@
+.slider {
+  @include flex-column(30);
+  margin-top: 90px;
+  margin-bottom: 50px;
+  background: var(--color-white, #ffffff);
+  border-radius: var(--border-radius);
+  padding-block:  80px;
+
+  @include mobile {
+    padding-block:  30px;
+    margin-block: 5px;
+  }
+
+  &__image {
+    border-radius: 12.9px;
+
+    @include tablet {
+      width: 300px;
+      height: 400px;
+    }
+  }
+
+  &__item {
+    width: auto;
+
+    &-title {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      color: var(--color-white, #ffffff);
+      font-size: 25.8px;
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
+.slider-top {
+  @include flex-row(80, space-between);
+  padding-inline: 80px 0;
+
+  @include desktop {
+    gap: 60px;
+  }
+
+  @include tablet {
+    gap: 40px;
+  }
+
+  @include mobile {
+    @include flex-column(30);
+    padding-inline: 0;
+  }
+
+  &__left {
+    @include flex-column(30);
+
+    @include mobile {
+      padding-inline: 30px;
+    }
+  }
+
+  &__text {
+    @include flex-column(10);
+
+    &-title {
+      @include font-inter-44-bold;
+      @include fluid-text(44,28);
+      color: var(--color-dark, #11133A);
+      white-space: nowrap;
+    }
+
+    &-description {
+      font-size: 14px;
+      color: var(--color-gray7, #515266);
+    }
+  }
+
+  &__button-load {
+        width: 100%;
+    }
+}
+
+.slider-bottom {
+  @include flex-column(30);
+  padding-inline: 80px ;
+
+  @include mobile {
+    padding-inline: 30px;
+  }
+
+  &__button-view {
+    width: 100%;
+  }
+}
+
+.mySwiper {
+  width: 100%;
+  border-radius: 12.9px 0 0 12.9px;
+  padding: 0 30px 0 0;
+
+  @include mobile {
+    padding: 0 30px 0 30px;
+    border-radius: 0;
+  }
+
+}
+
+.custom-scrollbar {
+  height: 10px; 
+  background-color: #E7F4F8; /* Цвет фона скроллбара */
+  width: 100%;
+  border-radius: 50px;
+}
+
+.custom-scrollbar .swiper-scrollbar-drag {
+  background-color: var(--color-green); /* Цвет ползунка */
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+.custom-prev-button,
+.custom-next-button {
+  transform: translateY(-50%);
+  background-color: var(--color-green);
+  border-radius: 50px;
+  width: 68px;
+  height: 68px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+}
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  width: auto;
+  height: auto;
+}
+
+.custom-prev-button {
+  left: 20px;
+  
+}
+
+.custom-next-button {
+  right: 106px;
+}
+
+.prev-button-svg {
+  transform: rotate(180deg);
+}
+
+.swiper-slide-active {
+  opacity: 0.8;
+
+  @include mobile {
+    opacity: 1;
+  }
+}
