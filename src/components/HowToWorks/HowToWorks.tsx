@@ -1,11 +1,16 @@
+'use client'
+
 import './HowToWorks.scss'
-
-import Image from 'next/image'
-
+import { useState } from 'react'
 import Button from '../UI/primitives/Button/Button'
+import MainImage from '../UI/primitives/Gallery/MainImage/MainImage'
+import Thumbnails from '../UI/primitives/Gallery/Thumbnails/Thumbnails'
 
 import { Clothes, UploadSvg, UploadSvgS } from '../../components/UI/svg'
+
 import Pikaco2 from '../../../public/Images/Pikaso2.png'
+import Pikaco1 from '../../../public/Images/Pikaso1.png'
+import Pikaco3 from '../../../public/Images/Pikaso3.png'
 
 import ImgHTWs1 from '../../../public/Icons/ImgHTWs1.png'
 import ImgHTWs2 from '../../../public/Icons/ImgHTWs2.png'
@@ -13,7 +18,17 @@ import ImgHTWs3 from '../../../public/Icons/ImgHTWs3.png'
 
 
 
-const HowToWorks = ({className = ''}) => {
+
+const HowToWorks = ({ className = '' }) => {
+	// const [selectedImage, setSelectedImage] = useState(ImgHTWs1)
+	const [selectedIndex, setSelectedIndex] = useState(0)
+	const mainImages = [Pikaco2, Pikaco1, Pikaco3]
+	const previewImages = [
+		ImgHTWs1,
+		ImgHTWs2,
+		ImgHTWs3,
+	]
+
 	return (
 		<div className={`how-to-works ${className || ''}`}>
 			<div className='how-to-works__left'>
@@ -41,29 +56,12 @@ const HowToWorks = ({className = ''}) => {
 			</div>
 			<div className='how-to-works__right'>
 				<div className='how-to-works__right-top'>
-					<ul className='how-to-works__right-top-list'>
-						<li className='how-to-works__right-top-item'>
-							<Image
-								src={ImgHTWs1}
-								alt='ImgHTWs1'
-								className='how-to-works__right-top-icon'
-							/>
-						</li>
-						<li className='how-to-works__right-top-item'>
-							<Image
-								src={ImgHTWs2}
-								alt='ImgHTWs2'
-								className='how-to-works__right-top-icon'
-							/>
-						</li>
-						<li className='how-to-works__right-top-item'>
-							<Image
-								src={ImgHTWs3}
-								alt='ImgHTWs3'
-								className='how-to-works__right-top-icon'
-							/>
-						</li>
-					</ul>
+					<Thumbnails
+						previewImages={previewImages}
+						selectedIndex={selectedIndex}
+						onImageSelect={setSelectedIndex}
+						className=''
+					/>
 					<Button
 						variant='righticon'
 						color='green'
@@ -91,11 +89,7 @@ const HowToWorks = ({className = ''}) => {
 					>
 						Undress
 					</Button>
-					<Image
-						src={Pikaco2}
-						alt='Pikaco2'
-						className='how-to-works__right-img'
-					/>
+					<MainImage image={mainImages[selectedIndex]} className='how-to-works__right-img' />
 				</div>
 			</div>
 		</div>
