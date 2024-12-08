@@ -1,0 +1,26 @@
+.asked-questions {
+    margin-block: 50px;
+
+    @include tablet { 
+        margin-block: 55px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include mobile {
+            text-align: start;
+
+        }
+
+        &-h1 {
+            @include font-inter-44-bold;
+            @include fluid-text(44, 28);
+        }
+    }
+    &__content {
+        @include flex-column(5);
+    }
+    
+}

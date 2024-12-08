@@ -1,0 +1,347 @@
+.plans {
+    @include flex-column(58); 
+    max-width: 1142px;
+    margin-inline: auto;
+    margin-top: 80px;
+    padding-bottom: 97px;
+
+    @include mobile {
+        margin-top: 15px;
+        padding-bottom: 32px;
+        gap: 30px;
+    }   
+
+
+}
+
+.plans-top {
+    @include flex-column(71);
+
+    @include tablet {
+        gap: 20px;
+    }
+
+    &__title {
+        @include fluid-text(60, 28);
+        color: var(--color-white);
+        margin-inline: auto;
+    }
+
+    &__cards {
+        @include flex-row(20, space-between);
+        position: relative;
+
+        @include tablet {
+            flex-wrap: wrap-reverse; 
+            justify-content: space-around;
+        }
+
+        &-item {
+            align-self: center;
+            &--popular {
+                @include abs-center;
+                
+                z-index: 3;
+
+                @include tablet {
+                    position: relative;
+                    translate: none;
+                    left: 0;
+                    top: 0;
+                    margin-top: 15px;
+                    order: 1;
+                }
+
+                @include mobile {
+                    order: 0;
+                }
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+        
+    }
+
+}
+
+.card {
+    &--popular {
+        border: 3px solid var(--color-white);
+        background: linear-gradient(135deg, #9FCCFA, #49C4CC);
+        gap: 11px !important;
+        padding-inline: 30px !important;
+
+        .card-top{
+            &__bottom {
+                
+                &-icon {
+                    @include square(100px);
+                    background-color: var(--color-white);
+                }
+
+                &-text {
+                    color: var(--color-white);
+                    gap: 10px;
+                    &-title {
+                        font-size: 20px;
+                        color: var(--color-white);
+                        font-weight: 600;
+                    }
+
+                    &-price {
+                        margin-right: 33px;
+                        &-new {
+                            font-size: 36px;
+                            font-weight: 600;
+                        }
+
+                        &-old {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-bottom {
+            border-top: 1px solid var(--color-white);
+            gap: 30px;
+            &__top {
+                padding-top: 25px;
+
+                &-item {
+                    background-color: #FFFFFF26;
+
+                    &--active {
+                        background-color: transparent;
+                    }
+                    
+                    &-icon {
+                        background-color: #FFFFFF1A;
+
+                        &--active {
+                            background-color: #FFFFFF0D;
+                        }
+                    }
+
+                    &-text {
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card {
+    @include flex-column(20);
+            flex: 0 0 auto;
+            border-radius: 30px;
+            background-color: var(--color-white);
+            padding: 30px 40px;
+            
+    
+
+
+   
+    &-top {
+        @include flex-column(10);
+
+        &__top {
+            @include flex-row(10, space-between);
+            &-sale {
+                max-height: 30px;
+                padding: 3px 12px;
+                background-color: #F15322;
+                border-radius: var(--border-radius);
+                color: var(--color-white);
+                
+            }
+
+            &-coins {
+                @include flex-row(4);
+                align-items: center;
+                background-color: var(--color-white);
+                border-radius: var(--border-radius);
+                border: 1px solid #42424226;
+                padding: 4px 10px;
+            }
+        }
+
+        &__bottom {
+            @include flex-row(20);
+
+            &-icon {
+                @include flex-center;
+                @include square(80px);
+                background-color: var(--color-gray2);
+                border-radius: var(--border-radius);
+            }
+
+            &-text {
+                @include flex-column(8);
+                color: var(--color-dark);
+                font-weight: 600;
+                line-height: 100%;
+                
+
+                
+                &-title {
+                    color: var(--color-dark);
+                    font-size: 18px;
+                    line-height: 120%;
+                }
+
+                &-price {
+                    @include flex-row(10, space-between);
+
+                    &-left {
+                        @include flex-column(4);
+                    }
+
+                    &-old {
+                        opacity: 0.5;
+                        line-height: 150%;
+                        font-size: 14px
+                    }
+
+                    &-new {
+                        @include font-inter-32-bold;
+                        font-size: 28px;
+                        line-height: 100%;
+                    }
+
+                    &-name {
+                        @include flex-row(10);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    &-bottom {
+        @include flex-column(20);
+        border-top: 1px solid var(--color-gray5);
+
+        &__top {
+            padding-top: 20px;
+
+            &-item {
+                @include flex-row(13);
+                align-items: center;
+                background-color: var(--color-gray1);
+                border-radius: 10px;
+
+                &--active {
+                    background-color: #FFFFFF00;
+                }
+
+                &-icon {
+                    @include flex-center;
+                    @include square(56px);
+                    border-radius: 10px;
+                    background-color: #F2F0ED;
+
+                    &--active {
+                        background-color: #FCFCFC;
+                    }
+                }
+
+                &-text {
+                    color: var(--color-gray7);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__bottom {
+            &-button {
+
+                width: 100%;
+            }
+        }
+    }
+}
+
+.plans-bottom {
+    @include flex-row(10, space-between);
+    border-radius: var(--border-radius);
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 35.5px 27px;
+
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+
+    @include tablet {
+        flex-direction: column;
+        padding: 20px;
+        margin-inline: 30px;
+    }
+
+
+    &__item {
+        padding-inline: 35px;
+        width: 100%;
+
+        @include mobile {
+            padding: 15px;
+        }
+
+        &-icon {
+            @include flex-center;
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background-color: var(--color-white); 
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            color: var(--color-white);
+            @include fluid-text(24, 18);
+        }
+
+        &-description {
+            color: var(--color-white);
+        }
+    }
+}
+
+.dashed-line {
+    opacity: 0.3;
+  width: 1px; 
+  height: auto; 
+  margin: 0 auto;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    white,
+    white 5px,
+    transparent 5px,
+    transparent 10px
+  );
+
+  @include tablet {
+    opacity: 0.3;
+    width: 100%;
+    height: 1px;
+    background: repeating-linear-gradient(
+      to right,
+      white,
+      white 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  }
+  
+}
+
+.absolute-center {
+    @include abs-center;
+    
+}

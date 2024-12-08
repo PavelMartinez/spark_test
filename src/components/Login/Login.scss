@@ -1,0 +1,101 @@
+.main-login {
+    @include flex-row(5);
+
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+
+    &__inner {
+        width: 100%;
+        &-image {
+            height: auto;
+            border-radius: var(--border-radius);
+            min-width: 50%;
+            
+        }
+    }
+    &__content {
+        border-radius: var(--border-radius);
+        background-color: var(--color-white);
+        padding: 30px 30px 80px 30px;
+        display: flex;
+        width: 100%;
+        max-width: 588px;
+
+        @include tablet {
+            padding: 30px;
+        }
+
+        @include mobile {
+             max-width: 100%;
+        }
+
+        &-inner {
+            @include flex-column(20, space-between);
+            align-self: center;
+            max-width: 460px;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            height: 100%;
+            max-height: 340px;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+        }
+
+        &-text {
+            @include flex-column(20);
+            @include tablet {
+                gap: 0;
+            }
+        }
+
+        &-title {
+            @include fluid-text(44, 28);
+            color: var(--color-dark);
+            max-width: 400px;
+            align-self: center;
+
+            @include tablet {
+                max-width: 290px;
+            }
+        }
+
+        &-description {
+            @include fluid-text(16, 14);
+            color: var(--color-gray7);
+            
+            
+            
+        }
+
+        &-buttons {
+            @include flex-column(20);
+            @include tablet {
+                gap: 10px;
+            }
+        }
+
+        &-button {
+            width: 100%;
+
+            @include tablet {
+                height: 52px;
+            }
+
+            &--create-account {
+                .button__content div:first-child {
+                background-color: transparent;
+            }
+            }
+            
+            &--telegram {
+                
+            }
+        }
+    }
+
+}
