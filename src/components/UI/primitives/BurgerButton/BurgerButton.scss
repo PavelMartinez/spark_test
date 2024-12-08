@@ -73,12 +73,15 @@ input {
 }
 
 #burger-toggle:checked ~ .overlay {
-    top: 60px;
     transition: 0.3s;
     opacity: 1;
     
     @include tablet {
-        top: 70px;
+        top: 80px;
+    }
+
+    @include mobile {
+        top: 60px;
     }
 
 }

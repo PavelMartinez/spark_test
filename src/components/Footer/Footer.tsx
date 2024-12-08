@@ -77,6 +77,7 @@ export const Footer = () => {
 									<Generation />
 								</div>
 								<Button
+									href='/login'
 									variant='lefticon'
 									size='s'
 									color='green'

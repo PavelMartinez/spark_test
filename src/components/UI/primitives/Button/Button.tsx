@@ -1,4 +1,5 @@
 import './Button.scss'
+import Link from 'next/link'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: 'lefticon' | 'righticon' | 'default'
@@ -55,11 +56,11 @@ const ButtonContent: React.FC<ButtonProps> = ({
 
 const Button = (props: ButtonProps) => {
 	if (props.href) {
-		// return (
-		// 	<Link href={props.href} passHref legacyBehavior>
-		// 		<ButtonContent {...props} />
-		// 	</Link>
-		// )
+		return (
+			<Link href={props.href} passHref legacyBehavior>
+				<ButtonContent {...props} />
+			</Link>
+		)
 	}
 	return <ButtonContent {...props} />
 }

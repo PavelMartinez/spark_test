@@ -147,10 +147,6 @@
             color: var(--color-white, #ffffff);
             background: var(--color-green, #49C4CC);
 
-            .button__content div:first-child {
-                background-color: var(--color-white, #ffffff);
-            }
-
             @include hover {
                 background: var(--color-green-dark, #40B3BA);
                 .color-green g:first-child {

@@ -12,6 +12,7 @@ import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
 import { Generation } from '../UI/primitives/Generation/Generation'
 import BurgerButton from '../UI/primitives/BurgerButton/BurgerButton'
+import Link from 'next/link'
 
 const Header: React.FC = () => {
 	const [showHeader, setShowHeader] = useState(true)
@@ -51,9 +52,9 @@ const Header: React.FC = () => {
 						<LogoHeaderMob />
 					</div>
 					<div className='header__buttons'>
-						<button className='header__buttons-item'>
+						<Link href='/login' className='header__buttons-item'>
 							<ButtonMobSvg />
-						</button>
+						</Link>
 						<BurgerButton />
 					</div>
 				</div>
@@ -82,6 +83,7 @@ const Header: React.FC = () => {
 						size='s'
 						color='green'
 						icon={<ButtonMobSvg className='color-green' />}
+						href='/login'
 					>
 						LOGIN
 					</Button>
