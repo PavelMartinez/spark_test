@@ -52,7 +52,7 @@ const Header: React.FC = () => {
 						<LogoHeaderMob />
 					</div>
 					<div className='header__buttons'>
-						<Link href='/login' className='header__buttons-item'>
+						<Link href='/default' className='header__buttons-item'>
 							<ButtonMobSvg />
 						</Link>
 						<BurgerButton />
