@@ -16,12 +16,39 @@
             color: #6F644D;
             white-space: nowrap;
             cursor: pointer;
+            height: 40px;
+            position: relative;
+            
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: transparent;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -44px;
+                 transition: width 0.5s ease;
+            }
+            
+
+            @include hover {
+                color: var(--color-green);
+                &::after {
+                    width: 100%;
+                    background-color: var(--color-green);
+                    transition: all .3s ease-in-out;
+                }
+
+            }
         }
 
         &-link {
             @include font-inter-14-regular-uppercase;
+            height: inherit;
+            align-items: center;
+            display: flex;
         }
     }
-
-    
 }

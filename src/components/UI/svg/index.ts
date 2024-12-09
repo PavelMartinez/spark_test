@@ -38,3 +38,8 @@ export { default as ShieldStar } from './ShieldStar.svg'
 // Advertising
 export { default as AdvertisingVector } from './AdvertisingVector.svg'
 
+export { default as GoogleSVG } from './GoogleSvg.svg'
+export { default as AppleSvg } from './AppleSvg.svg'
+
+export { default as OpenEye } from './OpenEye.svg'
+export { default as ClosedEye } from './ClosedEye.svg'

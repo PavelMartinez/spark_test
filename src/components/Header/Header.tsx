@@ -83,7 +83,7 @@ const Header: React.FC = () => {
 						size='s'
 						color='green'
 						icon={<ButtonMobSvg className='color-green' />}
-						href='/login'
+						href='/default'
 					>
 						LOGIN
 					</Button>
