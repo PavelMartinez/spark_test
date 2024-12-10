@@ -1,0 +1,133 @@
+.work {
+    @include flex-row(20, space-between);
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius);
+    background:  linear-gradient(to right, #9FCCFA, #49C4CC);
+    overflow: hidden;
+    position: relative;
+    
+    padding: 17px 34px 18px 71px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../../../public/HowToWorkVector.png) no-repeat;
+        left: 0;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+        padding: 40px 30px 17px 30px;
+        margin-block: 5px;
+        
+        
+    }
+
+        &__right {
+            
+            width: 493px;
+            height: 337px;
+            position: relative;
+            flex: 0 0 auto;
+            
+
+            @include mobile {
+                width: 334px;
+                
+            }
+
+
+            &-image {
+                border-radius: 23px;
+                position: absolute;
+
+                &--abs {
+                    border: 2px solid var(--color-white);
+                    z-index: 6;
+
+                    transform: rotate(-15deg);
+
+                    left: 25px;
+                    bottom: 25px;
+
+                    @include mobile {
+                        left: -15px;
+                        bottom: 30px;
+                    }
+                }
+
+                &--cloud {
+                    @include square(198px);
+                    background-color: #ffffff0F;
+                    backdrop-filter: blur(10px);
+                    z-index: 5;
+
+                    transform: rotate(16deg);
+
+                    top: 30px;
+                    right: 30px;
+                    
+
+                    @include mobile {
+                        top: 30px;
+                        right: -90px;
+                        
+                    }
+                    
+                }
+            }
+        }
+
+        &__info {
+            @include flex-column(35);
+             color: var(--color-white, #ffffff);
+
+             max-width: 620px;
+            @include mobile {
+                padding: 0 30px;
+            }
+
+            &-button {
+                padding-inline: 11px 75px !important;
+                height: 74px !important;
+                max-width: 200px;
+                
+                @include mobile {
+                    height: 52px !important;
+                    padding-left: 5px !important;
+
+                    .button__content {
+                        margin: 0 !important;
+                        gap: 30px;
+                    }
+                    .button__content div:first-child {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            &-text {
+                @include fluid-text(16, 14);
+                
+            }
+
+            &-title {
+                white-space: nowrap;
+                @include font-inter-44-bold;
+                @include fluid-text(44, 28);
+                
+                color: var(--color-white, #ffffff);
+
+            }
+        }
+        
+    }
