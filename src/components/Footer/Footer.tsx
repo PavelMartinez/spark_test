@@ -12,7 +12,7 @@ import MirIconImage from '../../../public/Icons/MirIconImage.png';
 import QiwiIconImage from '../../../public/Icons/QiwiIconImage.png';
 import YoomoneyIconImage from '../../../public/Icons/YoomoneyIconImage.png';
 
-export const Footer = () => {
+const Footer = () => {
     return (
 			<footer className='footer'>
 				<div className='footer__inner container'>
@@ -170,3 +170,5 @@ export const Footer = () => {
 			</footer>
 		)
 }   
+
+export default Footer
