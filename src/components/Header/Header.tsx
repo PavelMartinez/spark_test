@@ -68,6 +68,7 @@ const Header: React.FC = () => {
 						size='s'
 						color='blue'
 						icon={<MagicStickSvg />}
+						href='/generate'
 					>
 						GENERATE
 					</Button>

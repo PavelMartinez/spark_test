@@ -16,6 +16,12 @@
   padding-inline: var(--container-login-padding-x);
 }
 
+.reset-padding-mobile {
+  @include mobile {
+    padding-inline: 0 !important;
+  }
+}
+
 .visually-hidden {
   @include visually-hidden;
 }
@@ -56,4 +62,17 @@
 
 .icon {
   @include flex-center;
+}
+
+
+.margin-top {
+  margin-top: var(--height-header-desktop);
+
+  @include tablet {
+    margin-top: var(--height-header-tablet);
+  }
+
+  @include mobile {
+    margin-top: var(--height-header-mobile);
+  }
 }

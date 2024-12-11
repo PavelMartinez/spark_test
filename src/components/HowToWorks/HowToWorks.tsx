@@ -20,7 +20,7 @@ import ImgHTWs3 from '../../../public/Icons/ImgHTWs3.png'
 
 
 const HowToWorks = ({ className = '' }) => {
-	// const [selectedImage, setSelectedImage] = useState(ImgHTWs1)
+	
 	const [selectedIndex, setSelectedIndex] = useState(0)
 	const mainImages = [Pikaco2, Pikaco1, Pikaco3]
 	const previewImages = [

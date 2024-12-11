@@ -1,0 +1,86 @@
+.use-instruction {
+    max-width: 1260px;
+    height: 410px;
+    width: 100%;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+
+    &__inner {
+        @include flex-row(10, space-between);
+        height: 100%;
+
+        &-images {
+            @include flex-row(15);
+        }
+
+        &-image {
+            width: 250px;
+            height: 330px;
+            border-radius: 10px;
+        }
+
+        &-content {
+            @include flex-row(74);
+        }
+
+        &-text {
+            @include flex-column(15);
+            max-width: 450px;
+
+            &-title {
+                @include fluid-text(32, 24);
+                color: var(--color-dark);
+            }
+
+            &-description {
+                @include fluid-text(16, 12);
+                color: var(--color-gray7);
+            }
+
+            &-button {
+                align-self: start;
+                margin-top: 15px;
+            }
+        }
+
+        &-checkpoint {
+            @include flex-column(10, space-between);
+            position: relative;
+            z-index: 1;
+                        
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background-color: var(--color-green);
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                z-index: -1;
+            }
+
+            &-circle {
+                @include square(50px);
+                border: 1px solid var(--color-green);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: var(--color-white);
+                color: var(--color-grey7);
+                font-weight: 700;
+                font-size: 20px;
+                transition: all 0.5s ease-in-out;
+                cursor: pointer;
+                
+                &--active {
+                    background-color: var(--color-green);
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+}
+
