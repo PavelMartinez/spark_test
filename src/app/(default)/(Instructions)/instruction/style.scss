@@ -1,0 +1,165 @@
+.instruction {
+    padding-block: 5px;
+
+    &__inner {
+        @include flex-column(15);
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: 67px 80px 80px 80px;
+
+        @include tablet {
+            padding: 30px;
+        }
+
+        &-nav {
+            font-size: 12px;
+            color: var(--color-gray6);
+        }
+
+        &-text {
+            @include flex-column(30);
+            max-width: 1024px;
+            margin-bottom: 15px;
+
+            @include mobile {
+                gap: 10px;
+            }
+
+            &-title {
+                @include fluid-text(60, 24);
+                color: var(--color-dark);
+            }
+
+            &-description {
+                @include fluid-text(20, 14);
+                color: var(--color-dark);
+                
+            }
+        }
+
+        &-information {
+           padding: 52px 140px 52px 46px;
+           background-color: var(--color-blue-5);
+           border-radius: var(--border-radius);
+           position: relative;
+           overflow: hidden;
+           height: 320px; 
+           margin-top: 35px;
+           
+           @include tablet {
+            padding: 20px 20px 126px 20px;
+            height: auto; 
+            
+           }
+
+
+            &-text {
+                @include flex-row(15);
+                max-width: 989px;
+                position: relative;
+                z-index: 3;
+
+                @include tablet {
+                    gap: 10px;
+                    flex-direction: column;
+                }
+
+            }
+
+            &-title {
+                @include fluid-text(32, 20);
+                color: var(--color-dark);
+                    width: 100%;
+                }
+
+            &-description {
+                @include fluid-text(16, 14);
+                color: var(--color-dark);
+                width: 100%;
+            }
+
+            &-image {
+                position: absolute;
+                
+                
+                
+
+                &--eggplant {
+                    bottom: 0px;
+                    left: 59.15px;
+                    z-index: 2;
+                    transform: rotate(-10.46deg);
+
+                    @include mobile {
+                        width: 61.79px;
+                        height: auto;
+                        left: 18px;
+                        bottom: 51.34px;
+                        transform: rotate(-10.46deg);
+                    }
+                }
+
+                &--chili {
+                    bottom: -63.3px;
+                    right: 66.4px;
+                    z-index: 2;
+                    transform: rotate(14.36deg);
+
+                    @include tablet {
+                        width: 209px;
+                        height: auto;
+                        right: 0;
+                        bottom: -30px;
+                        transform: rotate(8.42deg);
+                    }
+                    
+                }
+
+                &--vector {
+                    bottom: 0;
+                    right: 0;
+                    z-index: 1;
+
+                    @include tablet {
+                        width: 300px;
+                        height: auto;
+                        bottom: 0;
+                    right: 0;
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.instruction__gallery {
+    @include flex-column(30);
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100vw;
+
+   margin-block: 80px;
+
+   @include mobile {
+    margin-block: 30px;
+   }
+   
+   
+
+   &-title {
+       @include fluid-text(44, 28);
+       color: var(--color-dark);
+       text-align: center;
+   }
+
+   &-images {
+       @include flex-row(0);
+       justify-content: center;
+       margin-top: 15px;
+       flex-wrap: wrap;
+       border-radius: var(--border-radius);
+   }
+}

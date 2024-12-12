@@ -1,4 +1,27 @@
 .generate {
-    margin-top: 128px;
     padding-block: 5px;
+
+
+    &__instructions {
+       background-color: var(--color-white);
+       padding: 40px;
+       @include flex-column(20);
+       max-width: 945px;
+       border-radius: var(--border-radius);
+
+       @include mobile {
+        padding: 30px;
+       }
+
+       &-title {
+            @include fluid-text(32, 20);
+            color: var(--color-dark);
+            margin-bottom: 20px;
+
+            @include mobile {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }   
+    }
 }

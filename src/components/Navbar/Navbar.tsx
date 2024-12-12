@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ variant = 'default', className, ...prop
 			<nav {...props} className={`navbar ${className || ''}`}>
 				<ul className='navbar__list'>
 					<li className='navbar__list-item'>
-						<Link href='/' className='navbar__list-link'>INSTRUCTION</Link>
+						<Link href='/instruction' className='navbar__list-link'>INSTRUCTION</Link>
 					</li>
 					<li className='navbar__list-item'>
 						<Link href='/' className='navbar__list-link'>SUPPORT</Link>
@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ variant = 'default', className, ...prop
 						<Link href='/' className='navbar__list-link'>MAIN</Link>
 					</li>
 					<li className='navbar__list-item'>
-						<Link href='/' className='navbar__list-link'>
+						<Link href='/instruction' className='navbar__list-link'>
 							INSTRUCTION
 						</Link>
 					</li>

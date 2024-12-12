@@ -29,6 +29,7 @@ const BurgerButton = () => {
 			<div className={`overlay ${isMenuOpen ? 'open' : ''}`}>
 				<Navbar variant='footer' className='overlay__navbar' />
 				<Button
+					href='/generate'
 					variant='lefticon'
 					size='s'
 					color='blue'

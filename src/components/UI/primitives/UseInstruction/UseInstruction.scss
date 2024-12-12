@@ -1,46 +1,146 @@
-.use-instruction {
-    max-width: 1260px;
-    height: 410px;
-    width: 100%;
-    padding: 40px;
-    border-radius: var(--border-radius);
-    background-color: var(--color-white);
+.use-instruction {   
+    
 
     &__inner {
-        @include flex-row(10, space-between);
+        @include flex-row(20, space-between);
         height: 100%;
+        border-radius: var(--border-radius);
+
+        &--instruction {
+            padding: 40px;
+            background-color: var(--color-gray1);
+        }
+
+        @include tablet {
+            padding: 20px;
+            gap: 10px;
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+            gap: 20px;    
+            padding: 20px; 
+            background-color: var(--color-gray1);   
+        }
 
         &-images {
             @include flex-row(15);
+
+            @include tablet {
+                gap: 8px;
+                justify-content:space-around;
+            }
+
         }
 
         &-image {
-            width: 250px;
+            object-fit: cover;
             height: 330px;
             border-radius: 10px;
+            min-width: 170px;
+
+            &--generate {
+                width: 235px;
+            }
+
+            &--instruction {
+                width: 250px;
+            }
+
+            @include mobile {
+                height: auto;
+                min-width: 100px;
+                border-radius: 5.76px;
+            }
+
         }
 
         &-content {
-            @include flex-row(74);
+            @include flex-row(20, space-between);
+            max-width: 970px;
+            width: 100%;
+
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+
+            &--generate {
+                gap: 20px;
+            }
+
+            &--instruction {
+                @include desktop {
+                    justify-content: space-around;
+                }
+            }
+
         }
 
         &-text {
             @include flex-column(15);
             max-width: 450px;
 
+            &--generate {
+                gap: 5px;
+                max-width: 295px;
+            }
+
+            &--instruction {
+                max-width: 450px;
+            }
+
+            @include mobile {
+                max-width: 100%;
+                gap: 5px;
+            }
+
+
+
             &-title {
-                @include fluid-text(32, 24);
                 color: var(--color-dark);
+
+                &--generate {
+                    @include fluid-text(24, 20);
+                }
+
+                &--instruction {
+                    @include fluid-text(32, 20);
+                }
             }
 
             &-description {
-                @include fluid-text(16, 12);
                 color: var(--color-gray7);
+
+                &--generate {
+                    font-size: 14px;
+                }
+
+                &--instruction {
+                    @include fluid-text(16, 14);
+                }
             }
 
             &-button {
                 align-self: start;
-                margin-top: 15px;
+                
+
+                &--generate {
+                    margin-top: 10px;
+                    height: 36px;
+                    font-size: 14px;
+                    padding-inline: 25px;
+                }
+
+                &--instruction {
+                    margin-top: 15px
+                }
+
+                @include mobile {
+                    margin-top: 10px;
+                    height: 36px;
+                    font-size: 14px;
+                    padding-inline: 25px;
+                }
             }
         }
 
@@ -48,6 +148,16 @@
             @include flex-column(10, space-between);
             position: relative;
             z-index: 1;
+
+            &--generate {
+                @include mobile-above{
+                    margin-bottom: 20px;
+                }
+            }
+
+            @include mobile {
+                flex-direction: row;
+            }
                         
             &::before {
                 content: "";
@@ -59,6 +169,14 @@
                 transform: translateX(-50%);
                 top: 0;
                 z-index: -1;
+
+                @include mobile {
+                    width: 100%;
+                    height: 2px;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
             }
 
             &-circle {
@@ -79,6 +197,24 @@
                     background-color: var(--color-green);
                     color: var(--color-white);
                 }
+
+                &--generate {
+                    @include square(40px);
+                    font-size: 16px;
+                }
+
+                &--instruction {
+                    @include tablet {
+                        @include square(40px);
+                        font-size: 16px;
+                    }
+                }
+
+                @include mobile {
+                    @include square(50px);
+                    font-size: 20px;
+                }
+
             }
         }
     }
