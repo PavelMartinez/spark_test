@@ -13,6 +13,7 @@ import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSele
 import { Generation } from '../UI/primitives/Generation/Generation'
 import BurgerButton from '../UI/primitives/BurgerButton/BurgerButton'
 import Link from 'next/link'
+import { usePathname} from 'next/navigation'
 
 const Header: React.FC = () => {
 	const [showHeader, setShowHeader] = useState(true)
@@ -37,6 +38,10 @@ const Header: React.FC = () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [lastScrollY])
+
+	const router = usePathname()
+	
+	
 
 	return (
 		<header
@@ -72,12 +77,10 @@ const Header: React.FC = () => {
 					>
 						GENERATE
 					</Button>
-					<Navbar />
+					<Navbar isActive={router} />
 				</div>
 				<div className='header__right'>
-					<LanguageSelector>
-						RU
-					</LanguageSelector>
+					<LanguageSelector>RU</LanguageSelector>
 					<Generation />
 					<Button
 						variant='lefticon'

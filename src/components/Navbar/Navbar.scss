@@ -42,6 +42,14 @@
                 }
 
             }
+
+            &--active {
+                color: var(--color-green);
+                &::after {
+                    width: 100%;
+                    background-color: var(--color-green);
+                }
+            }
         }
 
         &-link {

@@ -43,3 +43,5 @@ export { default as AppleSvg } from './AppleSvg.svg'
 
 export { default as OpenEye } from './OpenEye.svg'
 export { default as ClosedEye } from './ClosedEye.svg'
+
+export { default as Svg18 } from './Svg18.svg'

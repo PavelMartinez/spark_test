@@ -145,7 +145,7 @@ const Login: React.FC<LoginProps> = ({ variant = 'default', ...props}) => {
 										href='/'
 										className='main-login__form-input-forgot-password'
 									>
-										Я pабыл пароль
+										Я забыл пароль
 									</Link>
 									<div className='main-login__form-buttons'>
 										<Button
