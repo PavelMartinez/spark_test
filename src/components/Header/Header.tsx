@@ -1,45 +1,93 @@
-import React from 'react'
-import { ButtonSvg, Login, Logo, FlagSvgRu, AltArrowDown } from '../UI/svg'
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import {
+	Logo,
+	LogoHeaderMob,
+	ButtonMobSvg,
+	MagicStickSvg,
+} from '../UI/svg'
 import Button from '../UI/primitives/Button/Button'
 import Navbar from '../Navbar/Navbar'
 import { LanguageSelector } from '../UI/primitives/LanguageSelector/LanguageSelector'
 import { Generation } from '../UI/primitives/Generation/Generation'
- 
- 
-function Header() {
-  return (
-		<header className='header'>
+import BurgerButton from '../UI/primitives/BurgerButton/BurgerButton'
+import Link from 'next/link'
+import { usePathname} from 'next/navigation'
+
+const Header: React.FC = () => {
+	const [showHeader, setShowHeader] = useState(true)
+	const [lastScrollY, setLastScrollY] = useState(0)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY
+
+			if (currentScrollY > lastScrollY && currentScrollY > 100) {
+				setShowHeader(false) 
+			} else {
+				setShowHeader(true) 
+			}
+
+			setLastScrollY(currentScrollY)
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [lastScrollY])
+
+	const router = usePathname()
+	
+	
+
+	return (
+		<header
+			style={{
+				top: showHeader ? 0 : '-128px',
+				transition: 'top 0.3s ease-in-out',
+			}}
+			className='header'
+		>
 			<div className='header__inner container'>
-				<div className="header__mobile">
+				<div className='header__mobile'>
 					<div className='header__logo logo'>
-						<Logo />
+						<LogoHeaderMob />
 					</div>
-					<button className="burger"></button>
+					<div className='header__buttons'>
+						<Link href='/default' className='header__buttons-item'>
+							<ButtonMobSvg />
+						</Link>
+						<BurgerButton />
+					</div>
 				</div>
 				<div className='header__left'>
 					<div className='header__logo logo'>
 						<Logo />
 					</div>
 					<Button
-						variant='default'
-						iconLeft={<ButtonSvg width='50' height='50' />}
+						className='header__left-button'
+						variant='lefticon'
+						size='s'
+						color='blue'
+						icon={<MagicStickSvg />}
+						href='/generate'
 					>
 						GENERATE
 					</Button>
-					<Navbar />
+					<Navbar isActive={router} />
 				</div>
 				<div className='header__right'>
-					<LanguageSelector
-						leftIcon={<FlagSvgRu width='40' height='40' />}
-						rightIcon={<AltArrowDown />}
-					>
-						RU
-					</LanguageSelector>
-					<Generation leftIcon={<FlagSvgRu />} rightIcon={<FlagSvgRu />} />
+					<LanguageSelector>RU</LanguageSelector>
+					<Generation />
 					<Button
-						variant='login'
+						variant='lefticon'
+						size='s'
 						color='green'
-						iconLeft={<Login width='50' height='50' />}
+						icon={<ButtonMobSvg className='color-green' />}
+						href='/default'
 					>
 						LOGIN
 					</Button>

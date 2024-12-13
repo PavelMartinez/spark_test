@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import '@/styles/index.scss'
 import Header from '@/components/Header/Header'
-import { Footer } from '@/components/Footer/Footer'
+import Footer from '@/components/Footer/Footer'
 
 export const metadata = {
   title: 'Next.js',

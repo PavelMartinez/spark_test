@@ -1,38 +1,123 @@
 .notfound-page {
-    @include flex-column;
-
-    &__title {
-        @include fluid-text(517, 260);
-        color: #4E4E4E;
-        text-align: center;
-        -webkit-text-stroke-width: 2;
-        -webkit-text-stroke-color: #000;
-        font-family: var(--font-manrope);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%; /* 620.4px */
-        letter-spacing: -10.34px;
+    
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    padding: 67px 80px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../../../public/Vector404l.png) no-repeat;
+        background-position: left bottom;
+        left: 0;
+        top: 0;
+        z-index: 0;
     }
 
-    &__text {
-        @include font-manrope-40-bold;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../../../public/Vector404r.png) no-repeat;
+        background-position: right top;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+
+
+    &__title {
+        @include fluid-text(430, 176);
+        color: #E6F6FD;
+        position: absolute;
         text-align: center;
+        right: -6%;
+        bottom: -18%;
+        font-weight: 700;
+        line-height: 120%; 
+    }
+
+    &__image {
+        position: absolute;
+
+        &--chili {
+            bottom: 40px;
+            right: 50%;
+            z-index: 1;
+        }
+
+        &--eggplant {
+            top: 32px;
+            right:-87px;
+            z-index: 1;
+        }
+
     }
 
     &__info {
-        @include flex-row(20, space-between);
-        flex-wrap: wrap;
+        @include flex-column(50, space-between);
+        position: relative;
+        z-index: 2;
+
+        
         @include mobile {
             justify-content: center;
         }
+
+        &-text {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--color-gray6);
+            padding-bottom: 24px;
+
+        }
+
     }
 
-    &__button {
-        flex: 0 !important;
-        white-space: nowrap;
+    &__text {
+        @include flex-column(10);
+        color: var(--color-dark);
+        align-self: start;
+        &-title {
+            color: var(--color-dark);
+            position: relative;
+            
 
-        @include mobile {
-            flex: 1 !important;
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 52px;
+                height: 52px;
+                position: absolute;
+                right: -60px;
+                transform: rotate(15deg);
+                background: url(../../../public/Icons/BananaImg.png) no-repeat;
+                z-index: 1;
+    
+            }
         }
+    }
+
+    &__buttons {
+        @include flex-row(10);
+    }
+}
+
+.notfound {
+    margin-top: 128px;
+    padding-block: 5px 50px;
+
+    @include tablet {
+        margin-top: 90px;
+    }
+
+    @include mobile {    
+        margin-top: 70px;
     }
 }

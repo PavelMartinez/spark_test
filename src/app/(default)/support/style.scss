@@ -1,0 +1,10 @@
+.support {
+    padding-block: 5px;
+    @include flex-column(5);
+
+    &__questions {
+        @include mobile {
+            margin-inline: 20px;
+        }
+    }
+}

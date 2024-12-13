@@ -8,6 +8,8 @@
     --container-large-padding-x: 20px;
     --transition-duration: 0.2s;
 
+    --border-radius: 20px;
+
     --Corner-radius: 10px;
 
     --color-dark: #11133A;
@@ -15,10 +17,12 @@
     --color-green: #49C4CC;
     --color-green-dark: #40B3BA;
     --color-blue: #009CFF;
+    --color-blue-5: #E7F4F8;
     --color-blue-dark: #2685E4;
     --color-red: #F15322;
     --color-red-5: #FFFAF2;
     --color-yellow: #FFC33F;
+    --color-brown-dark: #502C00;
     --color-white: #ffffff;
     --color-gray1: #F8F8F8;
     --color-gray2: #F6F4F2;
@@ -31,15 +35,7 @@
     --color-gray9: #3B3A3A;
     --color-gray10: #28241F;
     
-
-    
-
-    --Gr1: linear-gradient(90deg, #24fe41 0%, #fdfc47 100%);
-    --Gr1hover: linear-gradient(90deg, #11e12d 0%, #fdd547 100%);
-    --Gr2: linear-gradient(223.26deg, #4e9f0d 0%, #0bbc87 100%);
-    --Gr2hover: linear-gradient(223.26deg, #428908 0%, #0fac7d 100%);
-    --Gr3: linear-gradient(223.26deg, #fc3e02 0%, #fca702 100%);
-    --Gr3hover: linear-gradient(223.26deg, #e43700 0%, #e76f00 100%);
-    --Stroke_Color: linear-gradient(180deg, #c5fc45 0%, #0e2e16 50%, #19642a 100%);
-    --Strokegradient: linear-gradient(180deg, #343434 0%, #191b18 50%, #343434 100%);
+    --height-header-desktop: 128px;
+    --height-header-tablet: 90px;
+    --height-header-mobile: 70px;
 }

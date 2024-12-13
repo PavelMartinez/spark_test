@@ -1,0 +1,218 @@
+.main-login {
+    @include flex-row(5);
+
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+
+    &__inner {
+        min-width: 50%;
+        &-image {
+            height: 100%;
+            border-radius: var(--border-radius);
+            
+            object-fit: cover;
+        }
+    }
+    &__content {
+        border-radius: var(--border-radius);
+        background-color: var(--color-white);
+        padding: 30px 30px 30px 30px;
+        display: flex;
+        width: 100%;
+        max-width: 588px;
+
+        &--default {
+             padding: 30px 30px 80px 30px;
+        }
+
+        @include tablet {
+            padding: 30px;
+        }
+
+        @include mobile {
+             max-width: 100%;
+        }
+
+        &-inner {
+            @include flex-column(20);
+            align-self: center;
+            max-width: 460px;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            height: 100%;
+            max-height: 340px;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            &--login {
+                max-height: 572px;
+                
+            }
+
+            &--registration {
+                max-height: 591px;
+    
+            }
+
+        }
+
+        &-text {
+            @include flex-column(20);
+            @include tablet {
+                gap: 0;
+            }
+        }
+
+        &-title {
+            @include fluid-text(44, 28);
+            color: var(--color-dark);
+            max-width: 400px;
+            
+            text-transform: uppercase;
+            align-self: start;
+
+            &--default {
+                align-self: center;
+            }
+
+            @include tablet {
+                max-width: 290px;
+            }
+        }
+
+        &-description {
+            @include fluid-text(16, 14);
+            color: var(--color-gray7);
+            
+            
+            
+        }
+
+        &-buttons {
+            @include flex-column(20);
+            @include tablet {
+                gap: 10px;
+            }
+        }
+
+        &-button {
+            width: 100%;
+
+            @include tablet {
+                height: 52px;
+            }
+
+            &--create-account {
+                .button__content div:first-child {
+                background-color: transparent;
+            }
+            }
+            
+            &--telegram {
+                
+            }
+        }
+    }
+
+    &__form {
+        @include flex-column(30);
+        
+        &-social {
+            @include flex-column(15);
+
+            &-text{
+                text-align: start;
+                color: var(--color-gray7);
+            }
+
+            &-buttons {
+                @include flex-row(10);
+            }
+
+            &-button {
+                @include square(70px);
+                border-radius: 50%;
+                background-color: var(--color-white);
+                border: 1px solid var(--color-gray5);
+                
+            }
+        }
+
+        &-input {
+            @include flex-column(15);
+
+            &-forgot-password {
+                border-bottom: 1px dashed var(--color-gray7);
+                align-self: center;
+                margin-bottom: 15px;
+                color: var(--color-gray7);
+            }
+
+            &-span {
+                text-align: start;
+                color: var(--color-gray7);
+                @include flex-row(11);
+                align-items: center;
+
+                &::after {
+                    content: '';
+                    background-color: #D3D7DE;
+                    display: inline-block;
+                    width: 100%;
+                    height: 1px;
+                }
+            }
+
+            &-email, &-password {
+                width: 100%;
+                height: 64px;
+                border-radius: 150px;
+                background-color: #F8F8F8 ;
+               
+                border: none;
+                padding: 20px 30px;
+                display: inline;
+                outline: none;
+
+                @include tablet {
+                    height: 52px;
+                }
+            }
+        }
+
+        &-buttons {
+            @include flex-column(20);
+
+            &-text {
+                color: var(--color-gray7);
+            }
+
+            &-link {
+                font-weight: 600;
+                color: var(--color-brown-dark);
+            }
+        }
+
+        &-checkbox {
+            @include flex-row(10);
+            @include fluid-text(16, 14);
+            color: var(--color-gray7);
+            padding-left: 17.5px;
+
+
+            &-container {
+                @include flex-column(5);
+            }
+
+            input {
+                display: block;
+            }
+
+        }
+    }
+
+}
