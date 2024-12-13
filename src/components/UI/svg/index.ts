@@ -47,3 +47,10 @@ export { default as ClosedEye } from './ClosedEye.svg'
 export { default as Svg18 } from './Svg18.svg'
 
 export { default as PenNewSquareSvg } from './PenNewSquareSvg.svg'
+
+export { default as FemSvg } from './FemSvg.svg'
+export { default as ManSvg } from './ManSvg.svg'
+
+export { default as IconLink } from './IconLink.svg'
+
+export { default as ArrowRightUpGoldSvg } from './ArrowRightUpGoldSvg.svg'

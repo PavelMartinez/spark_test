@@ -9,7 +9,8 @@ import { Scrollbar, Navigation } from 'swiper/modules'
 import Button from '../UI/primitives/Button/Button'
 
 import { UploadSvg, ArrowRightUp } from '../UI/svg'
-import Image1 from '../../../public/Images/Pikaso1.png'
+
+import ImagesGallery from '../../shared/data/ImagesGallery'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,16 +20,6 @@ import 'swiper/css/scrollbar'
 import './Slider.scss'
 
 const Slider = ({className = ''}) => {
-	// Временная функция map()* для теста карточек
-	const renderSlides = (count: number) => {
-		return Array.from({ length: count }, (_, index) => (
-			<SwiperSlide key={index} className='slider__item'>
-				<Image alt='Woman' src={Image1} className='slider__image' />
-				<h3 className='slider__item-title'>breckie hill nude</h3>
-			</SwiperSlide>
-		))
-	}
-
 	return (
 		<div className={`slider ${className || ''}`}>
 			<div className='slider-top'>
@@ -67,7 +58,12 @@ const Slider = ({className = ''}) => {
 							prevEl: '.custom-prev-button',
 						}}
 					>
-						{renderSlides(10)}
+						{ImagesGallery.map((image, index) => (
+							<SwiperSlide key={index} className='slider__item'>
+								<Image alt='Woman' src={image} className='slider__image' />
+								<h3 className='slider__item-title'>breckie hill nude</h3>
+							</SwiperSlide>
+						))}
 						<div className='swiper-button-next custom-next-button'>
 							<ArrowRightUp
 								className='next-button-svg'
