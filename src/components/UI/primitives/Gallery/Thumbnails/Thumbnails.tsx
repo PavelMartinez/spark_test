@@ -25,7 +25,9 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({
 					key={image.src}
 					src={image}
 					alt={`Thumbnail ${index + 1}`}
-					className={`thumbnail ${selectedIndex === index ? 'active' : ''}`}
+					className={`thumbnail ${
+						selectedIndex === index ? 'thumbnail--active' : ''
+					}`}
 					onClick={() => onImageSelect(index)}
 				/>
 			))}

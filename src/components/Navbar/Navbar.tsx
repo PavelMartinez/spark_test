@@ -66,28 +66,20 @@ const Navbar: React.FC<NavbarProps> = ({ variant = 'default', className, isActiv
 			<nav {...props} className={`navbar ${className || ''}`}>
 				<ul className='navbar__list'>
 					<li className='navbar__list-item'>
-						<Link href='/' className='navbar__list-link'>MAIN</Link>
-					</li>
-					<li className='navbar__list-item'>
-						<Link href='/instruction' className='navbar__list-link'>
-							INSTRUCTION
-						</Link>
-					</li>
-					<li className='navbar__list-item'>
 						<Link href='/' className='navbar__list-link'>
-							SUPPORT
+							MAIN
 						</Link>
 					</li>
-					<li className='navbar__list-item'>
-						<Link href='/' className='navbar__list-link'>
-							GALLERY
-						</Link>
-					</li>
-					<li className='navbar__list-item'>
-						<Link href='/' className='navbar__list-link'>
-							REFERAL PROGRAM
-						</Link>
-					</li>
+					{items.map((item, index) => (
+						<li
+							key={index}
+							className={`navbar__list-item`}
+						>
+							<Link href={item.link} className='navbar__list-link'>
+								{item.title}
+							</Link>
+						</li>
+					))}
 				</ul>
 			</nav>
 		)

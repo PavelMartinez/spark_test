@@ -45,3 +45,5 @@ export { default as OpenEye } from './OpenEye.svg'
 export { default as ClosedEye } from './ClosedEye.svg'
 
 export { default as Svg18 } from './Svg18.svg'
+
+export { default as PenNewSquareSvg } from './PenNewSquareSvg.svg'

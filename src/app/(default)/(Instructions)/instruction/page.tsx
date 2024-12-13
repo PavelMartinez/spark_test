@@ -5,6 +5,7 @@ import UseInstruction from '@/components/UI/primitives/UseInstruction/UseInstruc
 import EggplantImg from '@/../public/Icons/AdvertisingEggplant.png'
 import ChiliImg from '@/../public/Icons/ChiliBig.png'
 import VectorInstruction from '@/../public/VectorInstruction.png'
+import Link from 'next/link'
 
 import InstructionImages  from '@/shared/data/Instruction'
 
@@ -12,7 +13,9 @@ export default function InstructionPage() {
     return (
 			<section className='instruction container reset-padding-mobile margin-top'>
 				<div className='instruction__inner'>
-					<p className='instruction__inner-nav'>Main / Instruction</p>
+					<p className='instruction__inner-nav'>
+						<Link href='/'>Main</Link> / Instruction
+					</p>
 					<div className='instruction__inner-text'>
 						<h1 className='instruction__inner-text-title'>
 							HOW TO REMOVE CLOTHES FROM A PHOTO
@@ -61,17 +64,17 @@ export default function InstructionPage() {
 					<h2 className='instruction__gallery-title'>
 						Примеры наших изображений
 					</h2>
-                    <div className='instruction__gallery-images'>
-                        {InstructionImages.map((image, index) => (
-                            <Image
-                                key={index}
-                                src={image}
-                                alt='image'
-                                width={463}
-                                className='instruction__gallery-image'
-                            />
-                        ))}
-                    </div>
+					<div className='instruction__gallery-images'>
+						{InstructionImages.map((image, index) => (
+							<Image
+								key={index}
+								src={image}
+								alt='image'
+								width={463}
+								className='instruction__gallery-image'
+							/>
+						))}
+					</div>
 				</div>
 				<UseGenerator />
 			</section>

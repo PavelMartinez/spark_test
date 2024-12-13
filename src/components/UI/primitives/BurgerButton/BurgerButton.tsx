@@ -22,7 +22,7 @@ const BurgerButton = () => {
   	};
 	return (
 		<>
-			<input id='burger-toggle' type='checkbox' />
+			<input className='burger-toggle__input' id='burger-toggle' type='checkbox' />
 			<label htmlFor='burger-toggle' className='burger' onClick={toggleMenu}>
 				<span></span>
 			</label>

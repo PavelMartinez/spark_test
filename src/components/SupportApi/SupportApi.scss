@@ -1,0 +1,270 @@
+.support-api {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 67px 57px 69px 80px;
+    @include flex-column(15);
+    position: relative;
+    overflow: hidden;
+
+    @include tablet {
+        padding: 50px 30px 30px 30px;
+    }
+
+
+    &__text {   
+        font-size: 12px;
+        color: var(--color-gray6);
+    }
+
+    &__inner {
+        @include flex-row(20, space-between);
+        position: relative;
+        z-index: 5;
+
+        @include mobile {
+            align-items: center;
+            flex-direction: column;
+            gap: 55px;
+        }
+
+        &-button {
+            @include mobile {
+                margin-top: 10px;
+            }
+        }
+
+
+
+        &-content {
+            @include flex-column(30);
+            max-width: 502px;
+            width: 100%;
+
+            @include mobile {
+                gap: 10px;
+            }
+            
+        }
+
+        &-title {
+            @include fluid-text(60, 28);
+            color: var(--color-brown-dark);
+        }
+
+        &-description {
+            @include fluid-text(20, 14);
+            color: var(--color-brown-dark);
+        }
+
+        &-form {
+            @include flex-column(20);
+            padding: 55px 42px 40px 42px;
+            background-color: var(--color-gray1);
+            border-radius: var(--border-radius);
+            width: 100%;
+            max-width: 698px;
+            position: relative;
+
+            @include tablet {
+                padding: 46px 22px 22px 22px;
+                gap: 14px;
+            }
+
+            &-icon {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: var(--color-blue);
+                border-radius: var(--border-radius);
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &-info {
+                @include flex-row(14);
+
+                @include tablet {
+                    flex-direction: column;
+                }
+
+                &-label {
+                    @include fluid-text(16, 14);
+                    color: var(--color-gray7);
+                }
+
+                &-input {
+                    background-color: var(--color-white);
+                    border-radius: 5px;
+                    padding: 18px 30px;
+                    border: 1px solid var(--color-gray5);
+                    width: 100%;
+                    outline: none;
+                    @include fluid-text(16, 14);
+
+                    @include mobile {
+                        padding: 15px 30px;
+                        height: 50px;
+                        border: none;
+                    }
+
+                    &:hover {
+                        border: 1px solid var(--color-gray6);
+                    }
+
+                    
+                    &:focus {
+                        border: 1px solid var(--color-gray7);
+
+                        @include mobile {
+                            border: none;
+                        }
+                       
+                    }
+
+                    &::placeholder {
+                        @include fluid-text(16, 14);
+                        color: var(--color-gray6);
+                    }
+                }
+
+                
+            }
+
+            &-question {
+                @include flex-column(15);
+                width: 100%;
+
+                @include tablet {
+                    gap: 10px;
+                }
+
+                &-label {
+                    @include fluid-text(16, 14);
+                    color: var(--color-gray7);
+                }
+
+                &-textarea {
+                    background-color: var(--color-white);
+                    border-radius: 5px;
+                    padding: 18px 30px;
+                    border: 1px solid var(--color-gray5);
+                    max-height: 200px;
+                    resize: none;
+                    overflow: hidden;
+                    outline: none;
+
+                    @include mobile {
+                        border: none;
+                    }
+
+                    &:hover {
+                        border: 1px solid var(--color-gray6);
+                    }
+
+                    
+                    &:focus {
+                        border: 1px solid var(--color-gray7);
+
+                        @include mobile {
+                            border: none;
+                        }
+                       
+                    }
+
+                    &::placeholder {
+                        @include fluid-text(16, 14);
+                        color: var(--color-gray6);
+                    }
+                    
+                }
+            }
+
+            &-item {
+                @include flex-column(15);
+                width: 100%;
+
+                @include tablet {
+                    gap: 10px;
+                }
+            }
+
+            &-button {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__item-bg {
+        position: absolute;
+        
+        z-index: 1;
+
+        &--eggplant {
+            top: 437.8px;
+            right: 72%;
+            z-index: 2;
+            background-color: #E7F4F8;
+            border-radius: 12px;
+            border: 2px dashed #40B3BA;
+
+            width: 115.5px;
+            height: 115.5px;
+            
+
+            transform: rotate(30deg);
+
+            @include mobile {
+                width: 94px;
+                height: 94px;
+                right: 0;
+                top: 250px;
+                transform: rotate(-15deg);
+                
+
+                & img {
+                    width: 65px;
+                    height: 65px;
+                    
+                   transform: rotate(30deg);
+                }
+            }
+        }
+
+        &--chili {
+            top: 58px;
+            right: 61%;
+            z-index: 2;
+
+            width: 76px;
+            height: 76px;
+            
+
+
+            background-color: #FFF2F2;
+            border-radius: 12px;
+            border: 1.7px dashed #F15322;
+
+            transform: rotate(-15deg);
+
+            @include mobile {
+                width: 56px;
+                height: 56px;
+                right: 41px;
+                top: 44px;
+
+                & img {
+                    width: 28px;
+                    height: 30px;
+                   
+                }
+            }
+        }
+
+        &--vector {
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}
